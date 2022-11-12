@@ -44,20 +44,3 @@ export function RecipeListPage() {
         </div>
     );
 }
-
-
-{/* <div>
-<h1>Recipe List Page</h1>
-<div>{recipes.length}</div>
-<div>{recipes.map( recipe => {
-    return(
-        <div>
-            <img src={`/img/${recipe.img}`} alt="test" />
-            <div>{recipe._id}</div>
-        </div>  
-    );  
-    }
-    
-)}</div>
-</div>
-); */}
