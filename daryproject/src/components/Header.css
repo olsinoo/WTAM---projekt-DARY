@@ -1,0 +1,120 @@
+nav{
+  min-height: 12vh;
+  background-color: rgb(1, 1, 41);
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-topings-Name{
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+}
+
+.nav-section {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-mainName{
+  width: 75%;
+}
+
+.nav-cookbook{
+  text-decoration: none;
+
+}
+
+.nav-cookbook h1{
+
+  font-size: 4.5rem;
+  color: white;
+}
+
+.nav-topings,
+.nav-recipe,
+.nav-ingredients {
+  text-decoration: none;
+
+}
+
+.nav-topings h3,
+.nav-recipe h3,
+.nav-ingredients h3 {
+  font-size: 2rem;
+  color: white;
+}
+
+
+
+@media screen and (max-width: 700px) {
+  .nav-section {
+    width: 95%;
+    justify-content: space-between;
+  }
+
+  .nav-mainName{
+    width: 50%;
+  }
+
+  .nav-cookbook h1{
+    font-size: 3rem;
+  }
+
+  .nav-topings-Name{
+    display: none;
+  }
+
+  .nav-topings-name-mobile ul  {
+    list-style-type: none;
+  }
+
+  .nav-topings-name-mobile {
+    text-decoration: none;
+  }
+
+  .nav-topings-name-mobile{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-mobile-topings h3,
+  .nav-mobile-recipe h3,
+  .nav-mobile-ingredients h3 {
+
+    color:white;
+    font-size: 1.5rem;
+
+  }
+
+  .nav-topings-name-mobile{
+    display: flex;
+    width: 20%;
+    justify-content: right;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .nav-topings-name-mobile-button{
+    background-color: rgb(40, 167, 69);
+    color: white;
+    width: 100%;
+    font-size: 3rem;
+  }
+
+  .nav-topings-name-mobile-button:active{
+    background-color: rgb(18, 84, 33);
+    color: white;
+  }
+
+
+}
+
+@media screen and (min-width: 700px) {
+  .nav-topings-name-mobile{
+    display: none;
+  }
+}
