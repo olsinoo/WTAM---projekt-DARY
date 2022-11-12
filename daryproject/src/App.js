@@ -1,11 +1,12 @@
-import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-function App(){
-  return(
-    <div>
-      <h1>Hello React</h1>
-    </div>
+
+import { Routes } from './Routes';
+
+export function App() {
+  return (
+    <Router>
+        <Routes className="test" />
+    </Router>
   );
 }
-
-export default App;
