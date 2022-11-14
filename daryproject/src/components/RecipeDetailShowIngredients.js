@@ -1,13 +1,7 @@
 import { useEffect, useState } from 'react';
 
-export function ShowIngredients ({recipe}){
-    const [newServingCount, setNewServingCount] = useState();
-    const [price, setPrice] = useState();
-
-    useEffect(() => {
-        setNewServingCount(recipe.servingCount)
-        setPrice(recipe.price)
-    }, [recipe]);
+export function ShowIngredients ({recipe, setRecipe}){
+   
 
     const ListOfIngredients = ({ingredients}) => {
         if(ingredients?.length === 0){
@@ -22,8 +16,8 @@ export function ShowIngredients ({recipe}){
     }
 
     const ShowIngredient = ({ingredient}) => {
-        let ingredientAmount = Number((ingredient.amount / recipe.servingCount * newServingCount).toFixed(2));
-        let ingredientPrice = Number((ingredient.price / recipe.servingCount  * newServingCount).toFixed(2));
+        let ingredientAmount = Number((ingredient.amount / 4 * recipe.servingCount).toFixed(2));
+        let ingredientPrice = Number((ingredient.price / 4  * recipe.servingCount).toFixed(2));
 
         
         return (
@@ -41,29 +35,30 @@ export function ShowIngredients ({recipe}){
 
     const updateServingCount = (e) => {
         if (e.target.value === ""){
-          setNewServingCount("");
           return
         }
     
         if (e.target.valueAsNumber < 1 || e.target.valueAsNumber > 99){
           return
         }
-    
-        setNewServingCount(e.target.valueAsNumber);
+        
+        setRecipe({...recipe, servingCount: e.target.valueAsNumber})
     }
 
     const RecipePrice = () => {
+        recipe.price = Number(recipe.price / 4 * recipe.servingCount).toFixed(2);
+
         return(
-            <p>{Number((price / recipe.servingCount * newServingCount).toFixed(2))} eur</p>
+            <p>{(recipe.price)} eur</p>
         );
     }
 
     return(
         <div className='RecipeDetailPage-Ingredients-and-Directions'>
             <div className='RecipeDetailPage-Ingredients'>
-                <span hidden={recipe.ingredients?.length === 0 || newServingCount === undefined}>Serving Count</span>
+                <span hidden={recipe.ingredients?.length === 0}>Serving Count</span>
                 <div className='RecipeDetailPage-Ingredient-ServingCount-Section-input'>
-                    <input type="number" min="1" max="99" value={newServingCount} onChange={updateServingCount} ></input>
+                    <input type="number" min="1" max="99" value={recipe.servingCount} onChange={updateServingCount} ></input>
                 </div>    
             </div>
             <ListOfIngredients ingredients={recipe.ingredients}/> 
