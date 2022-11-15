@@ -1,5 +1,7 @@
-
 import { Link } from "react-router-dom";
+
+import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+
 import "./Header.css";
 
 export function Header() {

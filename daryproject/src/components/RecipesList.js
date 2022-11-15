@@ -1,5 +1,7 @@
 import { RecipeCard } from './RecipeCard';
 
+import "./RecipesList.css";
+
 export function RecipesList({ recipes }) {
   return (
     <div className='RecipeList-section'>

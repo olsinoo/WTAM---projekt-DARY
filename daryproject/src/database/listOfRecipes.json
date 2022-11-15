@@ -20,5 +20,49 @@
         "calories": 420,
         "countOfServing": 4,
         "img": "root-veggie-fries-ck.jpg"
+    },
+    {
+        "_id": "5b4f00f4f275000019d0c3b6",
+        "title": "Chocolate cheesecake",
+        "preparationTime":45,
+        "slug": "Chocolate-cheesecake",
+        "lastModifiedDate": "2018-10-05T19:25:38.083Z",
+        "price": 1.10,
+        "calories": 420,
+        "countOfServing": 4,
+        "img": "root-veggie-fries-ck.jpg"
+    },
+    {
+        "_id": "5b4f00f4f275000019d0c3b6",
+        "title": "Chocolate cheesecake",
+        "preparationTime":45,
+        "slug": "Chocolate-cheesecake",
+        "lastModifiedDate": "2018-10-05T19:25:38.083Z",
+        "price": 1.10,
+        "calories": 420,
+        "countOfServing": 4,
+        "img": "root-veggie-fries-ck.jpg"
+    },
+    {
+        "_id": "5b4f00f4f275000019d0c3b6",
+        "title": "Chocolate cheesecake",
+        "preparationTime":45,
+        "slug": "Chocolate-cheesecake",
+        "lastModifiedDate": "2018-10-05T19:25:38.083Z",
+        "price": 1.10,
+        "calories": 420,
+        "countOfServing": 4,
+        "img": "root-veggie-fries-ck.jpg"
+    },
+    {
+        "_id": "5b4f00f4f275000019d0c3b6",
+        "title": "Chocolate cheesecake",
+        "preparationTime":45,
+        "slug": "Chocolate-cheesecake",
+        "lastModifiedDate": "2018-10-05T19:25:38.083Z",
+        "price": 1.10,
+        "calories": 420,
+        "countOfServing": 4,
+        "img": "root-veggie-fries-ck.jpg"
     }
 ]
