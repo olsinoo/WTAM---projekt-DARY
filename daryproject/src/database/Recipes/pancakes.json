@@ -1,0 +1,66 @@
+[
+    {
+        "_id": "5bf6cbef6ac34b001baef483",
+        "title": "Pancakes",
+        "preparationTime": 15,
+        "directions": "1. Put 100g plain flour, 2 large eggs, 300ml milk, 1 tbsp sunflower or vegetable oil and a pinch of salt into a bowl or large jug, then whisk to a smooth batter.\n\n2. Set aside for 30 mins to rest if you have time, or start cooking straight away.\n\n3. Set a medium frying pan or crêpe pan over a medium heat and carefully wipe it with some oiled kitchen paper.\n\n4. When hot, cook your pancakes for 1 min on each side until golden, keeping them warm in a low oven as you go.\n\n5. Serve with lemon wedges and caster sugar, or your favourite filling. Once cold, you can layer the pancakes between baking parchment, then wrap in cling film and freeze for up to 2 months.",
+        "slug": "pancakes",
+        "price": 0.5,
+        "calories": 200,
+        "servingCount": 3,
+        "img": "pancakes.jpg",
+        "ingredients": [
+            {
+                "_id": "5b4f00f4f275000019d0c3bd",
+                "name": "plain flour",
+                "amount": 100,
+                "amountUnit": "g",
+                "price": 0.6
+            },
+            {
+                "_id": "5bb7bab2ec8ced001aead7a6",
+                "name": "egg",
+                "amount": 2,
+                "amountUnit": "pcs",
+                "price": 0.4
+            },
+            {
+                "_id": "5bb76032ec8ced001aead79c",
+                "name": "milk",
+                "amount": 300,
+                "amountUnit": "ml",
+                "price": 0.16
+            },
+            {
+                "_id": "5bb7bab2ec8ced001aead7a4",
+                "name": "sunflower oil",
+                "amount": 1,
+                "amountUnit": "spn",
+                "price": 0.12
+            },
+            {
+                "_id": "5b549f087fa4fb001a9ee9ef",
+                "name": "lemon wedges",
+                "amountUnit": "pcs",
+                "amount": 1,
+                "price": 0.4
+            },
+            {
+                "_id": "5b4f00f4f275000019d0c3b8",
+                "name": "caster sugar",
+                "amountUnit": "spn",
+                "amount": 1,
+                "price": 0.2
+            },
+            {
+                "_id": "5b51f75af275000019d0c3be",
+                "name": "beef mince",
+                "amountUnit": "g",
+                "amount": 500,
+                "price": 0.4
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

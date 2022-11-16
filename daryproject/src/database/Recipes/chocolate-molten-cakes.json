@@ -1,0 +1,66 @@
+[
+    {
+        "_id": "5bf6cbef6ac34b001baef483",
+        "title": "Chocolate Molten Cakes",
+        "preparationTime": 45,
+        "directions": "1. Heat oven to 200C/180C fan/gas 6. Butter 6 dariole moulds or basins well and place on a baking tray.\n\n2. Put 100g butter and 100g chopped dark chocolate in a heatproof bowl and set over a pan of hot water (or alternatively put in the microwave and melt in 30 second bursts on a low setting) and stir until smooth. Set aside to cool slightly for 15 mins.\n\n3. Using an electric hand whisk, mix in 150g light brown soft sugar, then 3 large eggs, one at a time, followed by ½ tsp vanilla extract and finally 50g plain flour. Divide the mixture among the darioles or basins.\n\n4. You can now either put the mixture in the fridge, or freezer until you're ready to bake them. Can be cooked straight from frozen for 16 mins, or bake now for 10-12 mins until the tops are firm to the touch but the middles still feel squidgy.\n\n5. Carefully run a knife around the edge of each pudding, then turn out onto serving plates and serve with single cream.",
+        "slug": "chocolate-molten-cakes",
+        "price": 0.80,
+        "calories": 320,
+        "servingCount": 2,
+        "img": "chocolate-molten-cakes.jpg",
+        "ingredients": [
+            {
+                "_id": "5b4f00f4f275000019d0c3bd",
+                "name": "butter",
+                "amount": 100,
+                "amountUnit": "g",
+                "price": 0.6
+            },
+            {
+                "_id": "5bb7bab2ec8ced001aead7a6",
+                "name": "dark chocolate",
+                "amount": 100,
+                "amountUnit": "g",
+                "price": 0.4
+            },
+            {
+                "_id": "5bb76032ec8ced001aead79c",
+                "name": "light brown soft sugar",
+                "amount": 150,
+                "amountUnit": "g",
+                "price": 0.16
+            },
+            {
+                "_id": "5bb7bab2ec8ced001aead7a4",
+                "name": "egg",
+                "amount": 3,
+                "amountUnit": "pcs",
+                "price": 0.12
+            },
+            {
+                "_id": "5b549f087fa4fb001a9ee9ef",
+                "name": "vanilla extract",
+                "amountUnit": "spn",
+                "amount": 0.5,
+                "price": 0.4
+            },
+            {
+                "_id": "5b4f00f4f275000019d0c3b8",
+                "name": "plain flour",
+                "amountUnit": "g",
+                "amount": 50,
+                "price": 0.2
+            },
+            {
+                "_id": "5b51f75af275000019d0c3be",
+                "name": "single cream",
+                "amountUnit": "g",
+                "amount": 100,
+                "price": 0.4
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]
