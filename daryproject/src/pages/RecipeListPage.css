@@ -1,0 +1,47 @@
+.RecipeListPage-header {
+  margin-top: 2rem;
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.RecipeListPage-header-Recipe{
+  display: flex;
+  align-items:center;
+  color: rgb(1, 1, 41);
+}
+
+.RecipeListPage-header h1{
+  font-size: 4rem;
+}
+
+.RecipeListPage-Reipe-records{
+  margin-top: 1rem;
+  flex: 1 1 10rem;
+  font-size: 1.7rem;
+}
+
+.RecipeListPage-underHeader-searchButton{
+  flex: 12 1 15rem;
+}
+
+.RecipeListPage-header-button-link,
+.RecipeListPage-advancedFilter{
+  flex: 1 1 10rem;
+}
+
+.RecipeListPage-header-button-link{
+  text-align: right;
+}
+
+.search-input{
+  width: 100%;
+  padding-left: 1.5rem;
+  font-size: 2rem;
+  border: 0.1rem solid rgb(1, 1, 41);
+}
+
+.search-inpup :active {
+  border: 0.3rem solid rgb(10, 10, 197);
+}

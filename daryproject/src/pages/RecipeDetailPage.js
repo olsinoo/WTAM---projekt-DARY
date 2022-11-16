@@ -11,7 +11,6 @@ import { ShowIngredients } from '../components/RecipeDetailShowIngredients';
 export function RecipeDetailPage() {
     const { slug } = useParams();
     const [recipe, setRecipe] = useState({});
-    const [addToBasket, setAddToBasekt] = useState(false);
 
     useEffect(() => {
         setRecipe(require('../database/Recipes/' + slug + '.json')[0]); 
@@ -38,9 +37,9 @@ export function RecipeDetailPage() {
         return result;
     }
 
-    useEffect(() =>{
+    const addToBasket = () =>{
         localStorage.setItem(recipe.title, JSON.stringify(recipe))
-    }, [addToBasket])
+    }
 
     return(
         <div className='RecipeDetailPage-section'> 
@@ -52,7 +51,7 @@ export function RecipeDetailPage() {
                     <img src={`/img/${recipe.img}`} alt="FoodImage" />
                 </div>
                 <div className='RecipeDetailPage-buttons'>
-                    <button className='button-blue-add-to-basket' onClick={() => setAddToBasekt(!addToBasket)}><FontAwesomeIcon icon={faShoppingBasket}/> Add to List</button>
+                    <button className='button-blue-add-to-basket' onClick={() => addToBasket()}><FontAwesomeIcon icon={faShoppingBasket}/> Add to List</button>
                     <Link to={`/recipes/${slug}/edit`} >
                         <button className='button-green'> <FontAwesomeIcon icon={faPenToSquare} />     Edit</button>
                     </Link>

@@ -1,0 +1,67 @@
+.RecipeList-section{
+  margin-top: 1%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  text-decoration: none;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: 47rem;
+}
+
+.RecipeCard-section{
+  text-decoration: none;
+  position: relative;
+  font-size: 1.5rem;
+  transition: 0.2s ease-in-out;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  background-size:cover;
+  background-position: center;
+}
+
+.RecipeCard-bodyText{
+  background-color: rgba(1, 1, 41, 0.4);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem;
+  transition: 0.2s ease-in-out;
+}
+
+.RecipeCard-section:hover{
+  transform: scale(1.1);
+}
+
+.RecipeCard-another, .RecipeCard-time{
+  display: none;
+}
+
+.RecipeCard-section:hover .RecipeCard-time, .RecipeCard-section:hover .RecipeCard-another{
+  display: flex;
+}
+
+/* .RecipeCard-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */ 
+
+.RecipeCard-bodyText:hover{
+  background-color: rgba(1, 1, 41, 0.5);
+}
+
+.RecipeCard-bodyText:active{
+  background-color: rgba(1, 1, 41, 0.8);
+}
+
+.RecipeCard-bodyText h2,
+.RecipeCard-bodyText p{
+  padding: 0.8rem 0.5rem 0 0.5rem;
+  color:white;
+}
+
+
+

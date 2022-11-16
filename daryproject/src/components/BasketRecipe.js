@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
 export function BasketRecipe({recipe}){
-    const {title, img, slug, price, } = {...recipe}
+    const {title, img, slug, price, ingredients} = {...recipe}
 
     return(
-       <Link className=''>
+       <Link className='' to>
             <div>{title}</div>
        </Link>
     );
