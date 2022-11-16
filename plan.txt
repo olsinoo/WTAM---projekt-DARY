@@ -1,0 +1,5 @@
+1.týždeň(7-13) : základná kostra stranky - HTML
+2.týždeň(14-20): úvodná stránka, databáza receptov(postup, ingrediencie, obrázky) 
+3.týždeň(21-27): stránka s detailom receptu, košík(pridanie receptov, zobrazenie celkovej ceny, zoznam potrebných ingrediencií) 
+4.týždeň(28-4): filtre(celková suma jedla, alergény, počet osôb), css 
+5.týždeň(5-11): testovanie a oprava buggov, prvá verzia webowej stránky s plnou funkcionalitou z testovania
