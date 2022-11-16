@@ -26,9 +26,6 @@ export function RecipeCard({ title, preparationTime, slug, price, calories, coun
     
     return(
         <Link className='RecipeCard-section' to={`/recipes/${slug}`} style={{backgroundImage: `url(/img/${img})`}}>
-            {/* <div className='RecipeCard-image'>
-              <img src={`/img/${img}`} alt="Preview" />
-            </div> */}
             <div className='RecipeCard-bodyText' hidden={() => onmouseleave}>
                 <h2 className="RecipeCard-title">{title.length > 30 ? title.slice(0, 30) + "..." : title}</h2>
                 <div className="RecipeCard-time">
