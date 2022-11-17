@@ -1,5 +1,5 @@
 nav{
-  min-height: 12vh;
+  min-height: 15vh;
   background-color: rgb(1, 1, 41);
   display: flex;
   align-items: center;
@@ -33,16 +33,18 @@ nav{
   color: white;
 }
 
-
 .nav-recipe,
 .nav-my-basket {
   text-decoration: none;
 }
 
-.nav-recipe h3,
-.nav-my-basket h3 {
-  font-size: 2rem;
+.nav-recipe h3 {
+  font-size: 3rem;
   color: white;
 }
 
+.nav-my-basket{
+  font-size: 3rem;
+  color: white;
+}
 

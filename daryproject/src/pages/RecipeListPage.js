@@ -14,6 +14,10 @@ export function RecipeListPage() {
     const [recipes, setRecipes] = useState([]);
     const [searchValue, setSearchValue] = useState('');
 
+    const filterredRecipes = recipes.filter((recipe) =>
+        recipe.title.toLowerCase().includes(searchValue.toLowerCase()),
+    );
+
     useEffect(() => {
         setRecipes(listOfRecipes)
     }, [])
@@ -29,6 +33,7 @@ export function RecipeListPage() {
                     <SearchInput
                         value={searchValue}
                         onChange={(event) => setSearchValue(event.target.value)}/>
+                    
                 </div>
                 <Link className="RecipeListPage-header-button-link" to={'/new-recipe'}>
                     <button className="button-green">
@@ -37,9 +42,9 @@ export function RecipeListPage() {
                 </Link>
             </div>
             <div className="RecipeListPage-Reipe-records">
-                    <h2>Aviable Recipes: {recipes.length} </h2>
+                    <h2>Aviable Recipes: {filterredRecipes.length} </h2>
             </div>
-            <RecipesList recipes={recipes} />
+            <RecipesList recipes={filterredRecipes} />
         </div>
     );
 }
