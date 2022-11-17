@@ -7,9 +7,8 @@ export function MyRecipesList(){
     const [recipes, setRecipes] = useState([])
 
     useEffect(() => {
-        let t = []
-        Object.keys(localStorage).forEach(key => t.push(JSON.parse(localStorage.getItem(key))))
-        setRecipes(t)
+        const recipesFromLocalStorage = Object.keys(localStorage).map(key => JSON.parse(localStorage.getItem(key)))
+        setRecipes(recipesFromLocalStorage)
     }, [])
 
 

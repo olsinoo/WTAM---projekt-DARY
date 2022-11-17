@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-
 export function ShowIngredients ({recipe, setRecipe}){
    
 
@@ -27,8 +25,8 @@ export function ShowIngredients ({recipe, setRecipe}){
             </div >
             <div className='RecipeDetailPage-ingredient-ingredientAmountUnit'>{ingredient?.amountUnit}
             </div>
-            <div className='RecipeDetailPage-ingredient-ingredientName'> {ingredient.name} </div>
-            <div className='RecipeDetailPage-ingredient-ingredietPrice'> {ingredientPrice} eur</div>
+            <div className='RecipeDetailPage-ingredient-ingredientName'>{ingredient.name} </div>
+            <div className='RecipeDetailPage-ingredient-ingredietPrice'>{ingredientPrice} eur</div>
           </li>
         );
     }
@@ -45,24 +43,24 @@ export function ShowIngredients ({recipe, setRecipe}){
         setRecipe({...recipe, servingCount: e.target.valueAsNumber})
     }
 
-    const RecipePrice = () => {
-        recipe.price = Number(recipe.price / 4 * recipe.servingCount).toFixed(2);
-
-        return(
-            <p>{(recipe.price)} eur</p>
-        );
-    }
-
     return(
         <div className='RecipeDetailPage-Ingredients-and-Directions'>
             <div className='RecipeDetailPage-Ingredients'>
-                <span hidden={recipe.ingredients?.length === 0}>Serving Count</span>
-                <div className='RecipeDetailPage-Ingredient-ServingCount-Section-input'>
-                    <input type="number" min="1" max="99" value={recipe.servingCount} onChange={updateServingCount} ></input>
-                </div>    
+                <div className="RecipeDetailPage-Ingredient-ServingCount-Section">
+                    <span hidden={recipe.ingredients?.length === 0}>Serving Count</span>
+                    <div className='RecipeDetailPage-Ingredient-ServingCount-Section-input'>
+                        <input type="number" min="1" max="99" value={recipe.servingCount} onChange={updateServingCount} ></input>
+                    </div>    
+                </div>   
+                <ListOfIngredients ingredients={recipe.ingredients}/> 
+           
+                <div className="RecipeDetailPage-Ingredients-priceOfAllIngredients">
+                    Price of all ingredients:  
+                    <p>   {Number(recipe.price / 4 * recipe.servingCount).toFixed(2)} eur</p>
+                </div>
+                
             </div>
-            <ListOfIngredients ingredients={recipe.ingredients}/> 
-            <RecipePrice />
+            
         </div>
     );
 }

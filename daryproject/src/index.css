@@ -11,22 +11,23 @@ html{
 button{
   font-size: 1.7rem;
   padding: 0.5rem 0.8rem;
+  color: white;
+  border: none;
 }
 
 /*buttons */
 .button-green{
-  font-size: 1.7rem;
   background-color: rgb(40, 167, 69);
-  color: white;
-  border-radius: 0.4rem;
-  border: none;
+
+}
+
+.button-blue{
+  background-color: rgb(0, 119, 234);
 }
 
 .button-red{
   background-color: rgb(167, 40, 40);
-  color: white;
-  border-radius: 2rem;
-  border: none;
+ 
 }
 
 .button-green:hover{
