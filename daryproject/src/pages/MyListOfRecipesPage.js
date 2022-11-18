@@ -1,26 +1,36 @@
 import { useEffect, useState } from 'react';
 
-
-import { BasketRecipe } from '../components/BasketRecipe';
+import { BasketIngredients } from '../components/BasketIngredients';
+import { RecipesList } from '../components/RecipesList'; 
 
 export function MyRecipesList(){
-    const [recipes, setRecipes] = useState([])
+    const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        const recipesFromLocalStorage = Object.keys(localStorage).map(key => JSON.parse(localStorage.getItem(key)))
-        setRecipes(recipesFromLocalStorage)
+        setRecipes(
+            Object.keys(localStorage).map(
+                key => 
+                    JSON.parse(
+                        localStorage.getItem(key)
+                    )
+                )
+        );
     }, [])
 
-
+    const getIngredients = () => {
+        return recipes.map(recipe =>
+            recipe.ingredients);
+    }
 
     return(
         <div className='basket'>
             <div className='basket-header'>
-                <h2>Your Recipes List</h2>
+                <h2>Your Basket</h2>
             </div>
-            {console.log(recipes)}
-             {recipes?.map((recipe) => (
-                    <BasketRecipe key={recipe._id} recipe={recipe} />))}
+            <div className='basket-body'>
+                <BasketIngredients ingredientsArray={getIngredients()}/>
+                <RecipesList recipes={recipes} />
+            </div>    
         </div>
 
     )

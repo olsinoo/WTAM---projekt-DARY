@@ -3,7 +3,7 @@ import { faClock, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function RecipeCard({ title, preparationTime, slug, price, calories, countOfServing, img }) {
-  function convertPreparatonTime(){
+  const convertPreparatonTime = () => {
         const hours = preparationTime / 60;
         const minutes = preparationTime % 60;
     

@@ -4,7 +4,7 @@ export function ShowIngredients ({recipe, setRecipe}){
     const ListOfIngredients = ({ingredients}) => {
         if(ingredients?.length === 0){
           return (<div className='RecipeDetailPage-noIngrdients'>No Ingredients.</div>);
-        }
+        };
     
         return ( 
             <div className='RecipeDetailPage-Ingredients-box'>
