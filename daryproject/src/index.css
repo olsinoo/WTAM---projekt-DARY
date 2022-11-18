@@ -34,12 +34,21 @@ button{
   background-color: rgb(18, 84, 33);
 }
 
+.button-blue:hover{
+  background-color: rgb(3, 58, 110);
+}
+
 .button-red:hover{
   background-color: rgb(94, 21, 21);
 }
 
 .button-green:active{
   background-color: rgb(18, 84, 33);
+  font-size: 2rem;
+}
+
+.button-blue:active{
+  background-color: rgb(1, 1, 41);
   font-size: 2rem;
 }
 

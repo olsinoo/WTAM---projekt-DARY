@@ -1,0 +1,19 @@
+.basket-your-shopping-list,
+.choosen-recipes{
+    font-size: 5rem;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.basket-ingredients{
+    margin: auto;
+    width: 60%;
+}
+
+.basket-price{
+    padding-top: 3rem;
+    font-size: 4rem;
+    text-align: right;
+    margin: auto;
+    width: 60%;
+}

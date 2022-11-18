@@ -1,26 +1,86 @@
 import { useEffect, useState } from 'react';
+import { ListOfIngredients } from '../components/ListOfIngredients';
+import { RecipesList } from '../components/RecipesList'; 
 
-
-import { BasketRecipe } from '../components/BasketRecipe';
+import "./MyListOfRecipesPage.css";
 
 export function MyRecipesList(){
-    const [recipes, setRecipes] = useState([])
+    // const [recipes, setRecipes] = useState([]);
 
-    useEffect(() => {
-        const recipesFromLocalStorage = Object.keys(localStorage).map(key => JSON.parse(localStorage.getItem(key)))
-        setRecipes(recipesFromLocalStorage)
-    }, [])
+    // useEffect(() => {
+    //     setRecipes(
+    //         Object.keys(localStorage).map(
+    //             key => 
+    //                 JSON.parse(
+    //                     localStorage.getItem(key)
+    //                 )
+    //             )
+    //     );
+    // }, [])
 
+    const recipes =  
+                Object.keys(localStorage).map(
+                    key => 
+                        JSON.parse(
+                            localStorage.getItem(key)
+                        )
+                    );
+    
+ 
+    const getIngredients = () => {
+        return recipes.map(recipe =>
+            recipe.ingredients);
+    }
+    
+    const GetPrice = () => {
+        const arrayOfPrice = recipes.map(recipe =>  recipe.price);
 
+        return ( 
+            <div className='basket-price'>
+                {arrayOfPrice.length !== 0 ? "/" + arrayOfPrice.reduce((result, price) => result = result + price) + " eur" : "" }
+            </div> 
+        );
+   
+    }
+
+    const ingredientsArray = getIngredients();
+
+    const sortedIngredients = () => {
+        const updatedIngredinets  = {};
+        ingredientsArray.forEach(ingredients => {
+            ingredients.forEach(ingredient => 
+                {
+                if (updatedIngredinets.hasOwnProperty(ingredient.name)){
+                    
+                    updatedIngredinets[ingredient.name].amount += ingredient.amount;
+                    updatedIngredinets[ingredient.name].price += ingredient.price;
+                
+                }
+                else{
+                  updatedIngredinets[ingredient.name] = ingredient;
+                }    
+              }        
+            )
+        })      
+        return Object.keys(updatedIngredinets).map( key => updatedIngredinets[key]);
+    }
 
     return(
         <div className='basket'>
-            <div className='basket-header'>
-                <h2>Your Recipes List</h2>
+            <div className='basket-your-shopping-list'>
+                Your Shopping List:
             </div>
-            {console.log(recipes)}
-             {recipes?.map((recipe) => (
-                    <BasketRecipe key={recipe._id} recipe={recipe} />))}
+            <div className='basket-ingredients'>
+                <ListOfIngredients  ingredients={sortedIngredients()} servingCount={4}/>
+            </div>
+            <GetPrice/>
+            <div className='choosen-recipes'>
+                Choosen recipes:
+            </div>
+            <div className='basket-recipes'>
+                <RecipesList recipes={recipes}  />
+            </div>
+            
         </div>
 
     )
