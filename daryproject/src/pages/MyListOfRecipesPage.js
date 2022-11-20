@@ -2,42 +2,32 @@ import { useEffect, useState } from 'react';
 import { ListOfIngredients } from '../components/ListOfIngredients';
 import { RecipesList } from '../components/RecipesList'; 
 
+
 import "./MyListOfRecipesPage.css";
 
 export function MyRecipesList(){
-    // const [recipes, setRecipes] = useState([]);
-
-    // useEffect(() => {
-    //     setRecipes(
-    //         Object.keys(localStorage).map(
-    //             key => 
-    //                 JSON.parse(
-    //                     localStorage.getItem(key)
-    //                 )
-    //             )
-    //     );
-    // }, [])
-
     const recipes =  
                 Object.keys(localStorage).map(
-                    key => 
-                        JSON.parse(
-                            localStorage.getItem(key)
-                        )
-                    );
+                    key => {
+
+                        if (key !== "price"){
+                            return JSON.parse(localStorage.getItem(key));  
+                        }
+                    }).filter(item => item);
     
- 
+    
+                    
     const getIngredients = () => {
         return recipes.map(recipe =>
-            recipe.ingredients);
+            recipe?.ingredients);
     }
     
     const GetPrice = () => {
-        const arrayOfPrice = recipes.map(recipe =>  recipe.price);
+        const arrayOfPrice = recipes.map(recipe =>  recipe?.price);
 
         return ( 
             <div className='basket-price'>
-                {arrayOfPrice.length !== 0 ? "/" + arrayOfPrice.reduce((result, price) => result = result + price) + " eur" : "" }
+                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + " eur" : "" }
             </div> 
         );
    
@@ -47,8 +37,8 @@ export function MyRecipesList(){
 
     const sortedIngredients = () => {
         const updatedIngredinets  = {};
-        ingredientsArray.forEach(ingredients => {
-            ingredients.forEach(ingredient => 
+        ingredientsArray?.forEach(ingredients => {
+            ingredients?.forEach(ingredient => 
                 {
                 if (updatedIngredinets.hasOwnProperty(ingredient.name)){
                     
@@ -71,7 +61,7 @@ export function MyRecipesList(){
                 Your Shopping List:
             </div>
             <div className='basket-ingredients'>
-                <ListOfIngredients  ingredients={sortedIngredients()} servingCount={4}/>
+                <ListOfIngredients  ingredients={sortedIngredients()}/>
             </div>
             <GetPrice/>
             <div className='choosen-recipes'>

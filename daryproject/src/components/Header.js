@@ -7,25 +7,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 
 export function Header() {
-  const [price, setPrice] = useState(0)
+  const [price, setPrice] = useState(0);
+
 
   useEffect(() => {
-    const arrayOfPriceOfRecipesFromLocalStorage = 
-        Object.keys(localStorage)?.
-            map(key => 
-                (JSON.parse(localStorage.getItem(key)).price)
-                )
-
-    if (arrayOfPriceOfRecipesFromLocalStorage.length !== 0){
-      setPrice(
-        arrayOfPriceOfRecipesFromLocalStorage?.reduce(
-          (result, price) =>
-            parseFloat(result) + parseFloat(price))
-            )
-    }
-}, [])
-
-
+    setPrice(parseFloat(localStorage.getItem('price')))
+}, [localStorage.getItem("price")])
 
   return (
     <nav>
@@ -36,7 +23,7 @@ export function Header() {
         <div className="nav-topings-Name">
           <Link className="nav-recipe" to="/"><h3>Recipe</h3></Link>
           <Link className="nav-my-basket" to={"/recipes-basket"}>
-              <div>{price} eur <FontAwesomeIcon icon={faShoppingBasket}/></div>
+              <div>{ !price ? "" : Number(price).toFixed(2) + "eur"}  <FontAwesomeIcon icon={faShoppingBasket}/></div>
           </Link>
         </div>
       </div>

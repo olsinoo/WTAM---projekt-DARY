@@ -1,22 +1,20 @@
-export function ListOfIngredients({ingredients, servingCount}){
+export function ListOfIngredients({ingredients}){
     if(ingredients?.length === 0){
       return (<div className='RecipeDetailPage-noIngrdients'>No Ingredients.</div>);
     };
+
     
     const ShowIngredient = ({ingredient}) => {
-        let ingredientAmount = Number((ingredient.amount / 4 * servingCount).toFixed(2));
-        let ingredientPrice = Number((ingredient.price / 4  * servingCount).toFixed(2));
-
-        
+        console.log(ingredient)
         return (
         <li className='RecipeDetailPage-ingredient'>
             <div className='RecipeDetailPage-ingredient-ingredientAmount'>
-            {ingredientAmount}
+            {Number(ingredient?.amount).toFixed(2)}
             </div >
             <div className='RecipeDetailPage-ingredient-ingredientAmountUnit'>{ingredient?.amountUnit}
             </div>
             <div className='RecipeDetailPage-ingredient-ingredientName'>{ingredient.name} </div>
-            <div className='RecipeDetailPage-ingredient-ingredietPrice'>{ingredientPrice} eur</div>
+            <div className='RecipeDetailPage-ingredient-ingredietPrice'>{Number(ingredient?.price).toFixed(2)} eur</div>
         </li>
         );
     }

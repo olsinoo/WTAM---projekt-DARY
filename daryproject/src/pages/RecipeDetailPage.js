@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactMarkdown from "react-markdown";
 
 import { ShowIngredients } from '../components/RecipeDetailShowIngredients';
+import { Header } from '../components/Header';
+
 
 import './RecipeDetailPage.css';
 
@@ -40,6 +42,11 @@ export function RecipeDetailPage() {
 
     const addToBasket = () =>{
         localStorage.setItem(recipe.title, JSON.stringify(recipe))
+        if (localStorage.getItem('price') === null){
+            localStorage.setItem('price', JSON.stringify(recipe.price));
+        } else {
+            localStorage.setItem('price', JSON.stringify(recipe.price + parseFloat(localStorage.getItem('price'))));
+        }
     }
 
     return(
