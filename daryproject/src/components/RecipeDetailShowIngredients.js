@@ -1,6 +1,7 @@
 import { ListOfIngredients } from "./ListOfIngredients"
-
+import { useEffect, useState } from 'react';
 export function ShowIngredients ({recipe, setRecipe}){
+
 
     const updateServingCount = (e) => {
         if (e.target.value === ""){
@@ -10,8 +11,17 @@ export function ShowIngredients ({recipe, setRecipe}){
         if (e.target.valueAsNumber < 1 || e.target.valueAsNumber > 99){
           return
         }
+       
+        setRecipe({...recipe, 
+            price: recipe.price / recipe.servingCount * e.target.valueAsNumber,
+            servingCount: e.target.valueAsNumber,
+            ingredients: recipe.ingredients
+                            .map(ingredient => {
+                                return {...ingredient,
+                                     amount: ingredient.amount / recipe.servingCount * e.target.valueAsNumber,
+                                     price: ingredient.price / recipe.servingCount * e.target.valueAsNumber}
+                                })});
         
-        setRecipe({...recipe, servingCount: e.target.valueAsNumber})
     }
 
     return(
@@ -23,7 +33,7 @@ export function ShowIngredients ({recipe, setRecipe}){
                         <input type="number" min="1" max="99" value={recipe.servingCount} onChange={updateServingCount} ></input>
                     </div>    
                 </div>   
-                <ListOfIngredients ingredients={recipe.ingredients} servingCount={recipe.servingCount} /> 
+                <ListOfIngredients ingredients={recipe.ingredients} /> 
            
                 <div className="RecipeDetailPage-Ingredients-priceOfAllIngredients">
                     Price of all ingredients:  
