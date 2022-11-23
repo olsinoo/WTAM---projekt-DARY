@@ -1,0 +1,80 @@
+[
+    {
+        "_id": "5bf6cbef6ac34b001baef483",
+        "title": "Sweet & sour chicken",
+        "preparationTime": 55,
+        "directions": "1. In a large microwaveable dish, mix the ketchup, vinegar, sugar and garlic thoroughly with the chicken, onion and peppers. Microwave, uncovered, on high for 8-10 mins until the chicken is starting to cook and the sauce is sizzling.\n\n2. Stir in the pineapple pieces and sugar snap peas and return to the microwave for another 3-5 mins until the chicken is completely cooked. Leave to stand for a few minutes, then stir in the cashews, if using, and serve.",
+        "slug": "sweet-sour-chicken",
+        "price": 1.50,
+        "calories": 270,
+        "servingCount": 4,
+        "img": "sweet-sour-chicken.jpg",
+        "ingredients": [
+            {
+                "_id": "5b4f00f4f275000019d0c3bd",
+                "name": "tomato ketchup",
+                "amount": 9,
+                "amountUnit": "spn",
+                "price": 0.6
+            },
+            {
+                "_id": "5bb7bab2ec8ced001aead7a6",
+                "name": "malt vinegar",
+                "amount": 3,
+                "amountUnit": "spn",
+                "price": 0.4
+            },
+            {
+                "_id": "5bb76032ec8ced001aead79c",
+                "name": "dark muscovado sugar",
+                "amount": 4,
+                "amountUnit": "spn",
+                "price": 0.16
+            },
+            {
+                "_id": "5bb7bab2ec8ced001aead7a4",
+                "name": "garlic cloves",
+                "amount": 2,
+                "amountUnit": "pcs",
+                "price": 0.12
+            },
+            {
+                "_id": "5b549f087fa4fb001a9ee9ef",
+                "name": "skinless and boneless chicken breast",
+                "amountUnit": "pcs",
+                "amount": 4,
+                "price": 0.4
+            },
+            {
+                "_id": "5b4f00f4f275000019d0c3b8",
+                "name": "onion, roughly chopped",
+                "amountUnit": "pcs",
+                "amount": 1,
+                "price": 0.2
+            },
+            {
+                "_id": "5b51f75af275000019d0c3be",
+                "name": "red peppers, seeded and cut into chunks",
+                "amountUnit": "pcs",
+                "amount": 2,
+                "price": 0.4
+            },
+            {
+                "_id": "5b51f75af275000019d0c3be",
+                "name": "pineapple pieces in juice",
+                "amountUnit": "g",
+                "amount": 227,
+                "price": 0.4
+            },
+            {
+                "_id": "5b51f75af275000019d0c3be",
+                "name": "sugar snap peas, roughly sliced",
+                "amountUnit": "g",
+                "amount": 100,
+                "price": 0.4
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

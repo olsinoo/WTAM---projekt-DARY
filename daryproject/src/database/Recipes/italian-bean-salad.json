@@ -1,0 +1,66 @@
+[
+    {
+        "_id": "5bf6cbef6ac34b001baef483",
+        "title": "Italian Bean Salad",
+        "preparationTime": 25,
+        "directions": "1. Finely chop the spring onions and put into a bowl with the garlic and the chilli. Mix in the cannellini beans and the butter beans. Whisk the olive oil with the white wine vinegar and add plenty of seasoning. Stir through the salad with plenty of chopped parsley.",
+        "slug": "italian-bean-salad",
+        "price": 0.75,
+        "calories": 150,
+        "servingCount": 2,
+        "img": "italian-bean-salad.jpg",
+        "ingredients": [
+            {
+                "_id": "5b4f00f4f275000019d0c3bd",
+                "name": "bunch spring onions",
+                "amount": 1,
+                "amountUnit": "pcs",
+                "price": 0.6
+            },
+            {
+                "_id": "5bb7bab2ec8ced001aead7a6",
+                "name": "garlic cloves, crushed",
+                "amount": 2,
+                "amountUnit": "pcs",
+                "price": 0.4
+            },
+            {
+                "_id": "5bb76032ec8ced001aead79c",
+                "name": "red chilli, seeded and finely chopped",
+                "amount": 1,
+                "amountUnit": "g",
+                "price": 0.16
+            },
+            {
+                "_id": "5bb7bab2ec8ced001aead7a4",
+                "name": "cannellini beans",
+                "amount": 800,
+                "amountUnit": "g",
+                "price": 0.12
+            },
+            {
+                "_id": "5b549f087fa4fb001a9ee9ef",
+                "name": "can of butter beans",
+                "amountUnit": "pcs",
+                "amount": 1,
+                "price": 0.4
+            },
+            {
+                "_id": "5b4f00f4f275000019d0c3b8",
+                "name": "olive oil",
+                "amountUnit": "spn",
+                "amount": 6,
+                "price": 0.2
+            },
+            {
+                "_id": "5b51f75af275000019d0c3be",
+                "name": "white wine vinegar",
+                "amountUnit": "spn",
+                "amount": 2,
+                "price": 0.4
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]
