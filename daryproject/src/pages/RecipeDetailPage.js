@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { faClock, faPenToSquare, faTrashAlt, faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faPenToSquare, faTrashAlt, faShoppingBasket, 	faFire, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactMarkdown from "react-markdown";
 
@@ -64,16 +64,23 @@ export function RecipeDetailPage() {
                         <button className='button-red' onClick={() => console.log("Wwooooo you delete recipe -_-")}> <FontAwesomeIcon icon={faTrashAlt} />     Delete</button>
                     </Link>
                 </div>
+             
+            </div>
+            <div className='RecipeDetailPage-preparationTime'>
+                    <h5>
+                        {convertPreparationTime() === "Not added time" ? "" : <FontAwesomeIcon icon={faClock} /> } {convertPreparationTime()}
+                    </h5>
+                    <h5>
+                        <FontAwesomeIcon icon={faFire} /> {Number(recipe.calories).toFixed(0)} kcal
+                    </h5>
+                    <h5>
+                        <FontAwesomeIcon icon={faMoneyBill} /> {Number(recipe.price).toFixed(2)} eur
+                    </h5>
             </div>
             <div className='RecipeDetailPage-body'>
                 <div className='RecipeDetailPage-left'>
                     <div className='RecipeDetailPage-recipeImage'>
                         <img src={`/img/${recipe.img}`} alt="FoodImage" />
-                    </div>
-                    <div className='RecipeDetailPage-preparationTime'>
-                        <h5>
-                            {convertPreparationTime() === "Not added time" ? "" : <FontAwesomeIcon icon={faClock} /> } {convertPreparationTime()}
-                        </h5>
                     </div>
                     <ShowIngredients recipe={recipe} setRecipe={setRecipe} />    
                 </div> 
