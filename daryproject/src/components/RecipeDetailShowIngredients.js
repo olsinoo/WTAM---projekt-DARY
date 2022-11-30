@@ -1,5 +1,4 @@
 import { ListOfIngredients } from "./ListOfIngredients"
-import { useEffect, useState } from 'react';
 export function ShowIngredients ({recipe, setRecipe}){
 
 
@@ -18,8 +17,8 @@ export function ShowIngredients ({recipe, setRecipe}){
             ingredients: recipe.ingredients
                             .map(ingredient => {
                                 return {...ingredient,
-                                     amount: Number(ingredient.amount / recipe.servingCount * e.target.valueAsNumber).toFixed(2),
-                                     price: Number(ingredient.price / recipe.servingCount * e.target.valueAsNumber).toFixed(2)}
+                                     amount: ingredient.amount / recipe.servingCount * e.target.valueAsNumber,
+                                     price: ingredient.price / recipe.servingCount * e.target.valueAsNumber}
                                 })});
         
     }
