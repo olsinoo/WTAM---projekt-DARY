@@ -16,13 +16,12 @@ export function Header() {
 
       window.addEventListener('storage', () => {
         const theme = parseFloat(localStorage.getItem('price'))
-        console.log(theme);
         setPrice(theme);
       })
       setLimit(parseFloat(localStorage.getItem('lim')));
 
 
-}, )
+}, [])
 
   return (
     <nav>
