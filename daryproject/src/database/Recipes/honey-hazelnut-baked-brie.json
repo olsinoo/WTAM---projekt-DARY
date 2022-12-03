@@ -1,0 +1,59 @@
+[
+    {
+        "_id": "Q1350HRMBZ0FY1BIX6XO7ML5",
+        "title": "Honey Hazelnut Baked Brie",
+        "preparationTime": 50,
+        "directions": "1. Place the vinegar, honey, salt, and 5 or 6 needles from the rosemary sprig into a small saucepan. Stir to combine. Heat on medium high heat until simmering. Then lower the heat to low and simmer until the mixture starts to darken in color and the consistency thickens to a thin syrup, about 5 to 10 minutes. (Note if you find that you have over-reduced the sauce, resulting in hard candy not syrup, you can add water to it and heat it again.).\n\n2. While the sauce is simmering, start on the brie. Preheat the oven to 350°F (175°C). Use a serrated knife to slice off the very top of the brie round, exposing the cheese on one side. Place on a parchment paper or Silpat lined baking sheet (cut side up). Bake until just soft and bubbly, about 15 minutes. (Jiggle the pan to see if the cheese has melted all the way through.).\n\n3. Remove the brie from the oven and let it cool for a minute or two. Use a metal spatula (or two) to carefully transfer it to a serving dish. Drizzle the honey vinegar hazelnut sauce over the brie. Garnish with the sprig of rosemary. Serve with sliced tart apples.",
+        "slug": "honey-hazelnut-baked-brie",
+        "price": 2.60,
+        "calories": 315,
+        "servingCount": 4,
+        "img": "honey-hazelnut-baked-brie.jpg",
+        "ingredients": [
+            {
+                "_id": "S4UXFX51DBR6NIFNZ9OFM2ZJ",
+                "amountUnit": "g",
+                "amount": 225,
+                "name": "round brie",
+                "price": 0.6
+            },
+            {
+                "_id": "K7LPUN9FGEIY38T21CFHBS3Y",
+                "name": "toasted hazelnuts",
+                "amount": 0.25,
+                "amountUnit": "cup",
+                "price": 0.15
+            },
+            {
+                "_id": "NACQADMK8HZZIOXGUFW8Q9GC",
+                "name": "sherry vinegar",
+                "amount": 120,
+                "amountUnit": "ml",
+                "price": 1.5
+            },
+            {
+                "_id": "PDTIPTQZALQRXEAVWIN06YKH",
+                "name": "tablespoons honey",
+                "amount": 5,
+                "amountUnit": "",
+                "price": 0.35
+            },
+            {
+                "_id": "HGK9EJUDCOHJDUEZYLESLFOV",
+                "name": "small sprig rosemary",
+                "amount": 1,
+                "amountUnit": "",
+                "price": 0.35
+            },
+            {
+                "_id": "KJABTZ8R5R7KSKIERP4T052A",
+                "name": "Pinch salt",
+                "amount": 1,
+                "amountUnit": "",
+                "price": 0.35
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

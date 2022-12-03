@@ -1,0 +1,73 @@
+[
+    {
+        "_id": "TSVLGL6OEPSUO5QB0XP3WQ07",
+        "title": "Spanish chicken stew",
+        "preparationTime": 40,
+        "directions": "1. In a large saucepan, heat 1 tbsp of the oil. Season the chicken and brown on both sides for 7-8 mins until golden, then set aside on a plate. Put the remaining 1 tbsp oil in the pan with the pepper, onion and garlic. Fry on a medium heat for 8 mins or until slightly golden. Add the vinegar and cook for 1 min.\n\n2. Return the chicken to the pan with the paprika and stock. Bring to the boil, then turn down to simmer for 25 mins until the chicken is cooked through. Add the olives and almonds, and serve with rice or crusty bread.",
+        "slug": "spanish-chicken-stew",
+        "price": 2.90,
+        "calories": 329,
+        "servingCount": 4,
+        "img": "spanish-chicken-stew.jpg",
+        "ingredients": [
+            {
+                "_id": "VVMCVBJTGTJM4VUP20GVCGDL",
+                "amountUnit": "spn",
+                "amount": 2,
+                "name": "olive oil",
+                "price": 0.2
+            },
+            {
+                "_id": "OYDEKRN8JWANJCY4436WRWHQ",
+                "name": "skinless boneless chicken thighs",
+                "amount": 500,
+                "amountUnit": "g",
+                "price": 0.9
+            },
+            {
+                "_id": "Q1350HRMBZ0FY1BIX6XO7ML5",
+                "name": "red pepper",
+                "amount": 1,
+                "amountUnit": "",
+                "price": 0.10
+            },
+            {
+                "_id": "S4UXFX51DBR6NIFNZ9OFM2ZJ",
+                "name": "large onion, sliced",
+                "amount": 1,
+                "amountUnit": "",
+                "price": 0.25
+            },
+            {
+                "_id": "K7LPUN9FGEIY38T21CFHBS3Y",
+                "name": "garlic cloves, chopped",
+                "amountUnit": "",
+                "amount": 2,
+                "price": 0.15
+            },
+            {
+                "_id": "NACQADMK8HZZIOXGUFW8Q9GC",
+                "name": "white wine vinegar",
+                "amountUnit": "spn",
+                "amount": 1,
+                "price": 0.2
+            },
+            {
+                "_id": "PDTIPTQZALQRXEAVWIN06YKH",
+                "name": "chicken stock",
+                "amountUnit": "ml",
+                "amount": 400,
+                "price": 0.7
+            },
+            {
+                "_id": "HGK9EJUDCOHJDUEZYLESLFOV",
+                "name": "flaked almonds, toasted",
+                "amountUnit": "g",
+                "amount": 50,
+                "price": 0.35
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { faClock, faPenToSquare, faTrashAlt, faShoppingBasket, 	faFire, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactMarkdown from "react-markdown";
+import React, { Component } from 'react';
+import { Alert, AppRegistry, Button, StyleSheet, View } from 'react-native';
 
 import { ShowIngredients } from '../components/RecipeDetailShowIngredients';
 import { Header } from '../components/Header';
@@ -39,17 +41,37 @@ export function RecipeDetailPage() {
     
         return result;
     }
+    const showAlert =() =>{
+        if (localStorage.getItem('price') === null){
+            let limit = prompt("The recipe has been added to the basket. \n Do you want to set a price limit for the cart?\n Set Limit:", "");
+            if (limit == null || limit == "") {
+                //lim = parseInt(limit);
+            } else {
+                localStorage.setItem('lim', parseInt(limit));
+            }
+        }
+        else{
+            alert("The recipe has been added to the basket.")
+        }
+
+    }
 
     const addToBasket = () =>{
-        localStorage.setItem(recipe.title, JSON.stringify(recipe))
-        if (localStorage.getItem('price') === null){
-            localStorage.setItem('price', JSON.stringify(recipe.price));
-        } else {
-            localStorage.setItem('price', JSON.stringify(recipe.price + parseFloat(localStorage.getItem('price'))));
+        if(localStorage.getItem(recipe.title) == null){
+            showAlert();
+            localStorage.setItem(recipe.title, JSON.stringify(recipe))
+            if (localStorage.getItem('price') === null){
+                localStorage.setItem('price', JSON.stringify(recipe.price));
+            } else {
+                localStorage.setItem('price', JSON.stringify(recipe.price + parseFloat(localStorage.getItem('price'))));
+            }
         }
+
+        window.dispatchEvent(new Event('storage'));
     }
 
     return(
+
         <div className='RecipeDetailPage-section'> 
             <div className='RecipeDetailPage-header-and-buttons'>
                 <div className='RecipeDetailPage-recipeTitle'>
