@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom';
 import { faClock, faPenToSquare, faTrashAlt, faShoppingBasket, 	faFire, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactMarkdown from "react-markdown";
-import React, { Component } from 'react';
-import { Alert, AppRegistry, Button, StyleSheet, View } from 'react-native';
-
 import { ShowIngredients } from '../components/RecipeDetailShowIngredients';
-import { Header } from '../components/Header';
 
 
 import './RecipeDetailPage.css';
@@ -18,8 +14,20 @@ export function RecipeDetailPage() {
     const [recipe, setRecipe] = useState({});
 
     useEffect(() => {
-        setRecipe(require('../database/Recipes/' + slug + '.json')[0]); 
+        const newRecipe = require('../database/Recipes/' + slug + '.json')[0]
+        const servingCountLS = localStorage.getItem("servingCount") !== null ? parseInt(localStorage.getItem("servingCount")) : newRecipe.servingCount
+        setRecipe({...newRecipe, 
+            price: newRecipe.price / newRecipe.servingCount * servingCountLS,
+            servingCount: servingCountLS,
+            ingredients: newRecipe.ingredients
+                            .map(ingredient => {
+                                return {...ingredient,
+                                     amount: ingredient.amount / newRecipe.servingCount * servingCountLS,
+                                     price: ingredient.price / newRecipe.servingCount * servingCountLS}
+                                })});
     },[slug]);
+
+    
 
     const convertPreparationTime = () =>{
         const hours = recipe.preparationTime / 60;
@@ -44,7 +52,7 @@ export function RecipeDetailPage() {
     const showAlert =() =>{
         if (localStorage.getItem('price') === null){
             let limit = prompt("The recipe has been added to the basket. \n Do you want to set a price limit for the cart?\n Set Limit:", "");
-            if (limit == null || limit == "") {
+            if (limit === null || limit === "") {
                 //lim = parseInt(limit);
             } else {
                 localStorage.setItem('lim', parseInt(limit));

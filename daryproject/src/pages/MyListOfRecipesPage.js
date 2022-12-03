@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
 import { ListOfIngredients } from '../components/ListOfIngredients';
 import { RecipesList } from '../components/RecipesList'; 
 
 
 import "./MyListOfRecipesPage.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faShoppingBasket} from "@fortawesome/free-solid-svg-icons";
 
 export function MyRecipesList(){
     const recipes =  

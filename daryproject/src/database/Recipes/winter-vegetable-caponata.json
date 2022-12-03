@@ -14,12 +14,12 @@
                 "_id": "20GVCGDLOYDEKRN8JWANJCY4",
                 "amountUnit": "g",
                 "amount": 200,
-                "name": "squash, peeled and cubed",
+                "name": "squash",
                 "price": 0.6
             },
             {
                 "_id": "436WRWHQQ1350HRMBZ0FY1BI",
-                "name": "turnips, peeled and cubed",
+                "name": "turnips",
                 "amount": 250,
                 "amountUnit": "g",
                 "price": 0.4
@@ -33,14 +33,14 @@
             },
             {
                 "_id": "Z9OFM2ZJK7LPUN9FGEIY38T2",
-                "name": "leeks, finely sliced",
+                "name": "leeks",
                 "amount": 2,
                 "amountUnit": "",
                 "price": 0.25
             },
             {
                 "_id": "1CFHBS3YNACQADMK8HZZIOXG",
-                "name": "garlic cloves, crushed",
+                "name": "garlic cloves",
                 "amountUnit": "",
                 "amount": 2,
                 "price": 0.4
@@ -68,7 +68,7 @@
             },
             {
                 "_id": "RP4T052AMM129PCW7UYBHAWS",
-                "name": "crusty bread, to serve",
+                "name": "crusty bread",
                 "amountUnit": "",
                 "amount": 1,
                 "price": 0.3

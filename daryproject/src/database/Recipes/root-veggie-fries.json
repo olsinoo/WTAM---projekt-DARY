@@ -14,19 +14,19 @@
                 "_id": "5b4f00f4f275000019d0c3bd",
                 "amountUnit": "cups",
                 "amount": 2,
-                "name": "matchstick-cut potato",
+                "name": "potato",
                 "price": 0.6
             },
             {
                 "_id": "5bb7bab2ec8ced001aead7a6",
-                "name": "matchstick-cut carrot",
+                "name": "carrot",
                 "amount": 200,
                 "amountUnit": "g",
                 "price": 0.4
             },
             {
                 "_id": "5bb76032ec8ced001aead79c",
-                "name": "matchstick-cut parsnip",
+                "name": "parsnip",
                 "amount": 120,
                 "amountUnit": "g",
                 "price": 0.16
@@ -47,14 +47,14 @@
             },
             {
                 "_id": "5b4f00f4f275000019d0c3b8",
-                "name": "ground red pepper",
+                "name": "red pepper",
                 "amountUnit": "spn",
                 "amount": 2,
                 "price": 0.2
             },
             {
                 "_id": "5b51f75af275000019d0c3be",
-                "name": "kosher salt",
+                "name": "salt",
                 "amountUnit": "spn",
                 "amount": 2,
                 "price": 0.4

@@ -8,29 +8,21 @@
         "price": 0.68,
         "calories": 315,
         "countOfServing": 4,
-        "img": "root-veggie-fries-ck.jpg"
+        "img": "root-veggie-fries-ck.jpg",
+        "ingredients": ["potato", "carrot", "parsnip"]
     },
     {
-        "_id": "5b4f00f4f275000019d0c3b6",
-        "title": "Chocolate cheesecake",
+        "_id": "0XP3WQ07VVMCVBJTGSJM4VUP",
+        "title": "Pasta alla Gricia",
         "preparationTime":45,
-        "slug": "Chocolate-cheesecake",
+        "slug": "pasta-alla-gricia",
         "lastModifiedDate": "2018-10-05T19:25:38.083Z",
-        "price": 1.10,
-        "calories": 420,
+        "price": 2.60,
+        "calories": 380,
         "countOfServing": 4,
-        "img": "root-veggie-fries-ck.jpg"
-    },{
-    "_id": "0XP3WQ07VVMCVBJTGSJM4VUP",
-    "title": "Pasta alla Gricia",
-    "preparationTime":45,
-    "slug": "pasta-alla-gricia",
-    "lastModifiedDate": "2018-10-05T19:25:38.083Z",
-    "price": 2.60,
-    "calories": 380,
-    "countOfServing": 4,
-    "img": "pasta-alla-gricia.jpg"
-},
+        "img": "pasta-alla-gricia.jpg",
+        "ingredients":["guanciale", "pasta", "cheese"]
+    },
     {
         "_id": "20GVCGDLOYDEKRN8JWANJCX4",
         "title": "Honey Hazelnut Baked Brie",
@@ -40,7 +32,9 @@
         "price": 2.60,
         "calories": 217,
         "countOfServing": 4,
-        "img": "honey-hazelnut-baked-brie.jpg"
+        "img": "honey-hazelnut-baked-brie.jpg",
+        "ingredients":["round brie", "hazelnuts", "honey", "rosemary"]
+        
     },
     {
         "_id": "436WRWHQQ1350HRMBZ0FY1BI",
@@ -51,7 +45,8 @@
         "price": 3.10,
         "calories": 292,
         "countOfServing": 4,
-        "img": "winter-vegetable-caponata.jpg"
+        "img": "winter-vegetable-caponata.jpg",
+        "ingredients":["squash", "turnips", "leeks", "garlic", "black olives", "raisins", "bread"]
     },
     {
         "_id": "X6XO7ML5S4UXFX51DBR6NIFN",
@@ -62,7 +57,8 @@
         "price": 2.90,
         "calories": 329,
         "countOfServing": 4,
-        "img": "spanish-chicken-stew.jpg"
+        "img": "spanish-chicken-stew.jpg",
+        "ingredients":["potato", "turnips"]
     },
     {
         "_id": "Z9OFM2ZJK7LPUN9FGEIY38T2",
@@ -73,7 +69,8 @@
         "price": 3.60,
         "calories": 662,
         "countOfServing": 4,
-        "img": "winter-greens-puff-pie.jpg"
+        "img": "winter-greens-puff-pie.jpg",
+        "ingredients":["potato", "leeks"]
     },
     {
         "_id": "1CFHBS3YNACQADMK8HZZIOXG",
@@ -84,6 +81,7 @@
         "price": 4.35,
         "calories": 589,
         "countOfServing": 4,
-        "img": "sausage-ragu.jpg"
+        "img": "sausage-ragu.jpg",
+        "ingredients":["potato"]
     }
 ]
