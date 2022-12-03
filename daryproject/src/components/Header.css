@@ -36,6 +36,9 @@ nav{
 .nav-recipe,
 .nav-my-basket {
   text-decoration: none;
+  border: solid #f8f8f8 thin;
+  border-radius: 15px;
+  padding: 10px 10px;
 }
 
 .nav-recipe h3 {
