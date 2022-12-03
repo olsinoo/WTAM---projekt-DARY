@@ -5,6 +5,28 @@
     margin: 4rem 0;
 }
 
+.basket-your-limit{
+    font-size: 26px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.basket-your-limit-form-input{
+    width: 50px;
+    font-size: 23px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.basket-your-limit-form-button{
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 2px 2px;
+}
+
 .basket-ingredients{
     margin: auto;
     width: 60%;
