@@ -75,3 +75,9 @@
 .RecipeListPage-showChoosenFilters p{
   font-size: 2rem;
 }
+
+.RecipeListPage-ResetFilter{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}

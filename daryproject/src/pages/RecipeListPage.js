@@ -15,6 +15,10 @@ export function RecipeListPage() {
     const [recipes, setRecipes] = useState([]);
     const [searchValue, setSearchValue] = useState('');
     const [filterIngredients, setFilterIngredients] = useState([]);
+    const [likedIngredients, setLikedIngredients] = useState([]);
+    const [dislikedIngredients, setDisLikedIngredients] = useState([]);
+    const [lim, setLim] = useState();
+    const [servCount, setServCount] = useState();
 
     const filterredRecipes = recipes.filter(recipe => 
         recipe.title.toLowerCase().includes(searchValue.toLowerCase()),
@@ -31,8 +35,13 @@ export function RecipeListPage() {
         setFilterIngredients(Ingredients);
         window.addEventListener('storage', () => {
             const theme = localStorage.getItem("dislikedIngredients");
+            setDisLikedIngredients(theme);
             const theme2 = localStorage.getItem("likedIngredients");
+            setLikedIngredients(theme2);
             const theme3 = localStorage.getItem("lim");
+            setLim(theme3);
+            const theme4 = localStorage.getItem("servingCount");
+            setServCount(theme4);
           })
     }, [])
 
@@ -81,6 +90,20 @@ export function RecipeListPage() {
         }
     }
 
+    const resetFilters = () => {
+        localStorage.removeItem("lim");
+        localStorage.removeItem("servingCount");
+        localStorage.removeItem("dislikedIngredients");
+        localStorage.removeItem("likedIngredients");
+        window.dispatchEvent(new Event('storage'));
+        setRecipes(recipes.map(recipe => {
+            return {...recipe,
+                    price: Number(recipe.price / recipe.countOfServing * 4).toFixed(2),
+                    countOfServing: 4
+                    }
+            }));
+    }
+
     
     return(
         <div className="RecipeListPage-section">
@@ -104,11 +127,11 @@ export function RecipeListPage() {
                 </div>
                 <div className="RecipeListPage-filters-maxSum">
                     <label htmlFor="">Max Sum: </label>
-                    <input type="number" min="0" max="99" step="0.01" onChange={setMaxSumToToLocalStorage} />
+                    <input type="number" min="0" max="99" step="0.01" placeholder='Set Lim' onChange={setMaxSumToToLocalStorage} />
                 </div>
                 <div className="RecipeListPage-filters-dilikedIngredients">
                     <label>Choose Disliked Ingredients: </label>
-                    <input list="dislikeIngredients" onChange={updateDislikedIngredients}/>
+                    <input list="dislikeIngredients" placeholder="Write here ingredient" onChange={updateDislikedIngredients}/>
                     <datalist id="dislikeIngredients">
                         {
                         filterIngredients.map(ingredient => {
@@ -119,7 +142,7 @@ export function RecipeListPage() {
                 </div>
                 <div className='RecipeListPage-filters-likedIngredinets'>
                     <label>Choose Liked Ingredients: </label>
-                    <input list="likeIngredients" onChange={updateLikedIngredients} />
+                    <input list="likeIngredients" placeholder="Write here ingredient" onChange={updateLikedIngredients} />
                     <datalist id="likeIngredients"  >
                         {
                         filterIngredients.map(ingredient => {
@@ -128,7 +151,10 @@ export function RecipeListPage() {
                         }
                     </datalist>
                 </div>
-                    
+             
+            </div>   
+            <div className='RecipeListPage-ResetFilter'>
+                    <button className='button-blue' onClick={resetFilters}>Reset Filters</button>
             </div>
             <div className="RecipeListPage-showChoosenFilters">
                 <p>Disliked Ingredients: {localStorage.getItem("dislikedIngredients") !== null ? localStorage.getItem("dislikedIngredients") : "[]"}</p>
