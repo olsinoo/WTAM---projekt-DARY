@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
 import listOfRecipes from '../database/listOfRecipes.json'
 import Ingredients from '../database/Ingredients.json'
 import { SearchInput } from '../components/SearchInput';
@@ -122,15 +122,15 @@ export function RecipeListPage() {
             </div>
             <div className="RecipeListPage-filters">
                 <div className="RecipeListPage-filters-servingCount">
-                    <label htmlFor="">Serving Count: </label>
+                    <label htmlFor="">Set Serving Count: </label>
                     <input type="number" min="1" max="99" value={localStorage.getItem("servingCount")  !== null ? localStorage.getItem("servingCount") : recipes[0]?.countOfServing} onChange={updateServingCount} />
                 </div>
                 <div className="RecipeListPage-filters-maxSum">
-                    <label htmlFor="">Max Sum: </label>
+                    <label htmlFor="">Set Limit for <FontAwesomeIcon icon={faBasketShopping} /></label>
                     <input type="number" min="0" max="99" step="0.01" placeholder='Set Lim' onChange={setMaxSumToToLocalStorage} />
                 </div>
                 <div className="RecipeListPage-filters-dilikedIngredients">
-                    <label>Choose Disliked Ingredients: </label>
+                    <label>Set Disliked Ingredients: </label>
                     <input list="dislikeIngredients" placeholder="Write here ingredient" onChange={updateDislikedIngredients}/>
                     <datalist id="dislikeIngredients">
                         {
@@ -141,7 +141,7 @@ export function RecipeListPage() {
                     </datalist>
                 </div>
                 <div className='RecipeListPage-filters-likedIngredinets'>
-                    <label>Choose Liked Ingredients: </label>
+                    <label>Set Liked Ingredients: </label>
                     <input list="likeIngredients" placeholder="Write here ingredient" onChange={updateLikedIngredients} />
                     <datalist id="likeIngredients"  >
                         {
@@ -153,14 +153,14 @@ export function RecipeListPage() {
                 </div>
              
             </div>   
-            <div className='RecipeListPage-ResetFilter'>
-                    <button className='button-blue' onClick={resetFilters}>Reset Filters</button>
-            </div>
+            
             <div className="RecipeListPage-showChoosenFilters">
                 <p>Disliked Ingredients: {localStorage.getItem("dislikedIngredients") !== null ? localStorage.getItem("dislikedIngredients") : "[]"}</p>
                 <p>Liked Ingredients: {localStorage.getItem("likedIngredients") !== null ? localStorage.getItem("likedIngredients") : "[]"}</p>
             </div>
-      
+            <div className='RecipeListPage-ResetFilter'>
+                    <button className='button-blue' onClick={resetFilters}>Reset Filters</button>
+            </div>
             
             <div className="RecipeListPage-Reipe-records">
                     <h2>Aviable Recipes: {filterredRecipes.length} </h2>

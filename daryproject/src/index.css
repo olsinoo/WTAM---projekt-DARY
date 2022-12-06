@@ -18,20 +18,17 @@ button{
 /*buttons */
 .button-green{
   background-color: rgb(40, 167, 69);
-  border-radius: 9px;
 
 
 }
 
 .button-blue{
   background-color: rgb(0, 119, 234);
-  border-radius: 8px;
   font-size: 20px;
 }
 
 .button-red{
   background-color: rgb(167, 40, 40);
-  border-radius: 8px;
   font-size: 20px;
  
 }

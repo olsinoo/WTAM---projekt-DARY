@@ -9,7 +9,7 @@ import "./Header.css";
 
 export function Header() {
   const [price, setPrice] = useState(parseFloat(localStorage.getItem('price')));
-  const [lim, setLimit] = useState(0);
+  const [lim, setLimit] = useState(parseFloat(localStorage.getItem('lim')));
 
 
     useEffect(() => {
