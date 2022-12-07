@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React, { Component } from "react";
 import { useEffect, useState } from 'react';
 
-import {faBasketShopping, faBus, faShoppingBasket} from "@fortawesome/free-solid-svg-icons";
+import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./Header.css";
