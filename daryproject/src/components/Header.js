@@ -17,9 +17,10 @@ export function Header() {
       window.addEventListener('storage', () => {
         const theme = parseFloat(localStorage.getItem('price'))
         setPrice(theme);
-      })
-      setLimit(parseFloat(localStorage.getItem('lim')));
+        setLimit(parseFloat(localStorage.getItem('lim')));
 
+      })
+      
 
 }, [])
 

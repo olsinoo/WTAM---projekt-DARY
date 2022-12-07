@@ -163,7 +163,7 @@ export function RecipeListPage() {
             </div>
             
             <div className="RecipeListPage-Reipe-records">
-                    <h2>Aviable Recipes: {filterredRecipes.length} </h2>
+                    <h2>Available Recipes: {filterredRecipes.length} </h2>
             </div>
             <RecipesList recipes={filterredRecipes} />
         </div>

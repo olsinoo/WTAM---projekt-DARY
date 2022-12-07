@@ -58,7 +58,7 @@
         "calories": 329,
         "countOfServing": 4,
         "img": "spanish-chicken-stew.jpg",
-        "ingredients":["potato", "turnips"]
+        "ingredients":["chicken", "onion", "garlic", "almond"]
     },
     {
         "_id": "Z9OFM2ZJK7LPUN9FGEIY38T2",
@@ -70,7 +70,7 @@
         "calories": 662,
         "countOfServing": 4,
         "img": "winter-greens-puff-pie.jpg",
-        "ingredients":["potato", "leeks"]
+        "ingredients":["onion", "garlic", "mascarpone", "cheese"]
     },
     {
         "_id": "1CFHBS3YNACQADMK8HZZIOXG",
@@ -82,6 +82,30 @@
         "calories": 589,
         "countOfServing": 4,
         "img": "sausage-ragu.jpg",
-        "ingredients":["potato"]
+        "ingredients":["garlic", "chilli", "tomato", "sausage", "pasta"]
+    },
+    {
+        "_id": "UFW8Q9GCPDTIPTQZALQRXEAV",
+        "title": "Microwave banana pudding",
+        "preparationTime":20,
+        "slug": "microwave-banana-pudding",
+        "lastModifiedDate": "2018-10-05T19:25:38.083Z",
+        "price": 2.05,
+        "calories": 474,
+        "countOfServing": 4,
+        "img": "microwave-banana-pudding.jpg",
+        "ingredients":["butter", "bananas", "egg", "milk"]
+    },
+    {
+        "_id": "WIN06YKHHGK9EJUDCOHJDUEZ",
+        "title": "Celery soup",
+        "preparationTime":55,
+        "slug": "celery-soup",
+        "lastModifiedDate": "2018-10-05T19:25:38.083Z",
+        "price": 2.40,
+        "calories": 163,
+        "countOfServing": 4,
+        "img": "celery-soup.jpg",
+        "ingredients":["celery", "potato", "milk"]
     }
 ]

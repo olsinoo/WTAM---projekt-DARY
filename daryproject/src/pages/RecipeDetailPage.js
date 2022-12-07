@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { faClock, faPenToSquare, faTrashAlt, faShoppingBasket, 	faFire, faMoneyBill } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faPenToSquare, faTrashAlt, faShoppingBasket, 	faFire, faMoneyBill, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactMarkdown from "react-markdown";
 import { ShowIngredients } from '../components/RecipeDetailShowIngredients';
@@ -12,6 +12,7 @@ import './RecipeDetailPage.css';
 export function RecipeDetailPage() {
     const { slug } = useParams();
     const [recipe, setRecipe] = useState({});
+    const navigate = useNavigate();
 
     useEffect(() => {
         const newRecipe = require('../database/Recipes/' + slug + '.json')[0]
@@ -81,6 +82,7 @@ export function RecipeDetailPage() {
     return(
 
         <div className='RecipeDetailPage-section'> 
+            <button className='RecipeDetailPage-section-buttonBack' onClick={() => navigate(-1)}> <FontAwesomeIcon icon={faArrowLeft} /> Back</button>
             <div className='RecipeDetailPage-header-and-buttons'>
                 <div className='RecipeDetailPage-recipeTitle'>
                     <h1>{recipe.title}</h1>
