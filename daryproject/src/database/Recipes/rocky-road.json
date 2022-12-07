@@ -1,56 +1,56 @@
 [
     {
-        "_id": "5bf6cbef6ac34b001baef483",
+        "_id": "b6f857ea-763f-11ed-a1eb-0242ac120002",
         "title": "Rocky Road",
         "preparationTime": 50,
         "directions": "1. Grease and line an 18cm square brownie tin with baking paper.\n\n2. Place 200g digestive biscuits in a freezer bag and bash with a rolling pin or just the side of your fist until they're broken into a mixture of everything between dust and 50p-sized lumps. Set aside.\n\n3. In a large saucepan melt 135g butter or margarine, 200g dark chocolate and 2-3 tbsp golden syrup over a gentle heat stirring constantly until there are no or almost no more lumps of chocolate visible, then remove from the heat. Leave to cool.\n\n4. Take the biscuits, 100g mini marshmallows and up to 100g of additional ingredients (dried fruit, nuts, popcorn, honeycomb), if you like, and stir into the chocolate mixture until everything is completely covered.\n\n5. Tip the mixture into the lined baking tin, and spread it out to the corners. Chill for at least 2 hrs then dust with icing sugar and cut into 12 fingers.",
         "slug": "rocky-road",
-        "price": 1.20,
+        "price": 3.20,
         "calories": 460,
-        "servingCount": 3,
+        "servingCount": 4,
         "img": "rocky-road.jpg",
         "ingredients": [
             {
-                "_id": "5b4f00f4f275000019d0c3bd",
+                "_id": "e3a91ecc-7640-11ed-a1eb-0242ac120002",
                 "name": "biscuits",
                 "amount": 200,
                 "amountUnit": "g",
                 "price": 0.6
             },
             {
-                "_id": "5bb7bab2ec8ced001aead7a6",
+                "_id": "f37a7518-763f-11ed-a1eb-0242ac120002",
                 "name": "butter",
                 "amount": 135,
                 "amountUnit": "g",
                 "price": 0.4
             },
             {
-                "_id": "5bb76032ec8ced001aead79c",
+                "_id": "06b8de44-7640-11ed-a1eb-0242ac120002",
                 "name": "dark chocolate",
                 "amount": 200,
                 "amountUnit": "g",
-                "price": 0.16
+                "price": 1
             },
             {
-                "_id": "5bb7bab2ec8ced001aead7a4",
+                "_id": "ebf18fe2-7640-11ed-a1eb-0242ac120002",
                 "name": "golden syrup",
                 "amount": 3,
                 "amountUnit": "spn",
-                "price": 0.12
+                "price": 0.1
             },
             {
-                "_id": "5b549f087fa4fb001a9ee9ef",
+                "_id": "eeaf361c-7640-11ed-a1eb-0242ac120002",
                 "name": "marshmallows",
                 "amountUnit": "g",
                 "amount": 100,
                 "price": 0.4
             },
             {
-                "_id": "5b4f00f4f275000019d0c3b8",
-                "name": "icing sugar",
+                "_id": "129d740e-7640-11ed-a1eb-0242ac120002",
+                "name": "sugar",
                 "amountUnit": "spn",
                 "amount": 1,
-                "price": 0.2
+                "price": 1
             }
         ],
         "lastModifiedDate": "2022-11-12T14:37:13.403Z",

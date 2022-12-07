@@ -22,47 +22,47 @@
         "img": "root-veggie-fries-ck.jpg"
     },
     {
-        "_id": "5b4f00f4f275000019d0c3b6",
+        "_id": "2502e058-763f-11ed-a1eb-0242ac120002",
         "title": "Classic Lasagne",
         "preparationTime":60,
         "slug": "classic-lasagne",
         "lastModifiedDate": "2022-11-16T19:25:38.083Z",
-        "price": 1.35,
+        "price": 1.05,
         "calories": 400,
-        "countOfServing": 6,
+        "countOfServing": 4,
         "img": "classic-lasagne.jpg"
     },
     {
-        "_id": "5b4f00f4f275000019d0c3b6",
+        "_id": "ad0bb13c-763f-11ed-a1eb-0242ac120002",
         "title": "Pancakes",
         "preparationTime":15,
         "slug": "pancakes",
         "lastModifiedDate": "2020-12-12T19:25:38.083Z",
-        "price": 0.5,
-        "calories": 200,
-        "countOfServing": 3,
+        "price": 0.75,
+        "calories": 225,
+        "countOfServing": 4,
         "img": "pancakes.jpg"
     },
     {
-        "_id": "5b4f00f4f275000019d0c3b6",
+        "_id": "b6f857ea-763f-11ed-a1eb-0242ac120002",
         "title": "Rocky road",
         "preparationTime":50,
         "slug": "rocky-road",
         "lastModifiedDate": "2016-10-04T19:25:38.083Z",
-        "price": 1.20,
+        "price": 3.20,
         "calories": 460,
-        "countOfServing": 3,
+        "countOfServing": 4,
         "img": "rocky-road.jpg"
     },
     {
-        "_id": "5b4f00f4f275000019d0c3b6",
+        "_id": "0747982e-763f-11ed-a1eb-0242ac120002",
         "title": "Chocolate molten cakes",
         "preparationTime":45,
         "slug": "chocolate-molten-cakes",
         "lastModifiedDate": "2021-08-22T19:25:38.083Z",
-        "price": 0.80,
+        "price": 1.60,
         "calories": 320,
-        "countOfServing": 2,
+        "countOfServing": 4,
         "img": "chocolate-molten-cakes.jpg"
     },
     {
@@ -77,14 +77,14 @@
         "img": "sweet-sour-chicken.jpg"
     },
     {
-        "_id": "5b4f00f4f275000019d0c3b6",
+        "_id": "53056fd4-763f-11ed-a1eb-0242ac120002",
         "title": "Italian bean salad",
         "preparationTime":25,
         "slug": "italian-bean-salad",
         "lastModifiedDate": "2017-02-14T19:25:38.083Z",
-        "price": 0.75,
+        "price": 1.50,
         "calories": 150,
-        "countOfServing": 2,
+        "countOfServing": 4,
         "img": "italian-bean-salad.jpg"
     }
 ]
