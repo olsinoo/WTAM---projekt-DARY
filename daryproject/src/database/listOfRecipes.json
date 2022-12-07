@@ -30,7 +30,8 @@
         "price": 1.05,
         "calories": 400,
         "countOfServing": 4,
-        "img": "classic-lasagne.jpg"
+        "img": "classic-lasagne.jpg",
+        "ingredients": ["olive oil", "bacon", "onion", "celery stick", "carrot", "garlic", "beef mince"]
     },
     {
         "_id": "ad0bb13c-763f-11ed-a1eb-0242ac120002",
@@ -41,7 +42,8 @@
         "price": 0.75,
         "calories": 225,
         "countOfServing": 4,
-        "img": "pancakes.jpg"
+        "img": "pancakes.jpg",
+        "ingredients": ["flour", "egg", "milk", "sunflower oil", "lemon", "sugar", "beef mince"]
     },
     {
         "_id": "b6f857ea-763f-11ed-a1eb-0242ac120002",
@@ -52,7 +54,8 @@
         "price": 3.20,
         "calories": 460,
         "countOfServing": 4,
-        "img": "rocky-road.jpg"
+        "img": "rocky-road.jpg",
+        "ingredients": ["biscuits", "butter", "dark chocolate", "golden syrup", "marshmallows", "sugar"]
     },
     {
         "_id": "0747982e-763f-11ed-a1eb-0242ac120002",
@@ -63,18 +66,8 @@
         "price": 1.60,
         "calories": 320,
         "countOfServing": 4,
-        "img": "chocolate-molten-cakes.jpg"
-    },
-    {
-        "_id": "5b4f00f4f275000019d0c3b6",
-        "title": "Sweet & sour chicken",
-        "preparationTime":55,
-        "slug": "sweet-sour-chicken",
-        "lastModifiedDate": "2022-10-05T19:25:38.083Z",
-        "price": 1.50,
-        "calories": 270,
-        "countOfServing": 4,
-        "img": "sweet-sour-chicken.jpg"
+        "img": "chocolate-molten-cakes.jpg",
+        "ingredients": ["flour", "egg", "milk", "sunflower oil", "lemon", "sugar", "beef mince"]
     },
     {
         "_id": "53056fd4-763f-11ed-a1eb-0242ac120002",
@@ -85,6 +78,7 @@
         "price": 1.50,
         "calories": 150,
         "countOfServing": 4,
-        "img": "italian-bean-salad.jpg"
+        "img": "italian-bean-salad.jpg",
+        "ingredients": ["onion", "garlic", "red chilli", "beans", "butter beans", "olive oil", "white wine"]
     }
 ]
