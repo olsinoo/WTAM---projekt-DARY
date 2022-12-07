@@ -126,7 +126,7 @@ export function RecipeListPage() {
                     <input type="number" min="1" max="99" value={localStorage.getItem("servingCount")  !== null ? localStorage.getItem("servingCount") : recipes[0]?.countOfServing} onChange={updateServingCount} />
                 </div>
                 <div className="RecipeListPage-filters-maxSum">
-                    <label htmlFor="">Set Limit for <FontAwesomeIcon icon={faBasketShopping} /></label>
+                    <label htmlFor="">Set Budget Limit for <FontAwesomeIcon icon={faBasketShopping} /></label>
                     <input type="number" min="0" max="99" step="0.01" placeholder='Set Lim' onChange={setMaxSumToToLocalStorage} />
                 </div>
                 <div className="RecipeListPage-filters-dilikedIngredients">

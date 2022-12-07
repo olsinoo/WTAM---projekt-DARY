@@ -51,7 +51,7 @@ export function RecipeDetailPage() {
         return result;
     }
     const showAlert =() =>{
-        if (localStorage.getItem('price') === null){
+        if (localStorage.getItem('lim') === null){
             let limit = prompt("The recipe has been added to the basket. \n Do you want to set a price limit for the cart?\n Set Limit:", "");
             if (limit === null || limit === "") {
                 //lim = parseInt(limit);
