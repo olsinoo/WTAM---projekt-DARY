@@ -1,0 +1,66 @@
+[
+    {
+        "_id": "VUXNIN8RHSUWQ8SD2ZR5ZS29",
+        "title": "Microwave banana pudding",
+        "preparationTime": 50,
+        "directions": "1. Put the butter in a 1-litre baking dish and microwave on High for 30 secs-1 min until melted. Add 1½ bananas, mash into the melted butter, then add the sugar, flour, cinnamon, eggs and milk. Mix together well.\n\n 2.Slice the remaining banana over the top, then return to the microwave and cook on High for 8 mins until cooked through and risen. Serve warm, dusted with icing sugar, if you like, with a drizzle of toffee sauce and a scoop of ice cream.",
+        "slug": "microwave-banana-pudding",
+        "price": 2.05,
+        "calories": 474,
+        "servingCount": 4,
+        "img": "microwave-banana-pudding.jpg",
+        "ingredients": [
+            {
+                "_id": "XXOFXDMWJVLO6YWS42IXEIGO",
+                "amountUnit": "g",
+                "amount": 100,
+                "name": " butter, ",
+                "price": 0.45
+            },
+            {
+                "_id": "Q0FGMTQALYCPLE06659YTYJS",
+                "name": "ripe bananas",
+                "amount": 2,
+                "amountUnit": "",
+                "price": 0.3
+            },
+            {
+                "_id": "S3682JUOD13H14DLZ80Q9ON7",
+                "name": "light muscovado sugar",
+                "amount": 100,
+                "amountUnit": "g",
+                "price": 0.2
+            },
+            {
+                "_id": "U6WZHZ73GET8QKHP1BQIO51L",
+                "name": "self-raising flour",
+                "amount": 100,
+                "amountUnit": "g",
+                "price": 0.3
+            },
+            {
+                "_id": "N9NRXPBHIHK05AV43EHJDV50",
+                "name": "ground cinnamon",
+                "amountUnit": "spn",
+                "amount": 2,
+                "price": 0.25
+            },
+            {
+                "_id": "PCESCFPMAK11KQZIWIYBTBJE",
+                "name": "eggs",
+                "amountUnit": "",
+                "amount": 2,
+                "price": 0.4
+            },
+            {
+                "_id": "RFVKRVT1DNST0GCXYLP281NJ",
+                "name": "milk",
+                "amountUnit": "spn",
+                "amount": 2,
+                "price": 0.15
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

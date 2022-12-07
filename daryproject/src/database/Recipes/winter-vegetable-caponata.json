@@ -1,0 +1,80 @@
+[
+    {
+        "_id": "0XP3WQ07VVMCVBJTGTJM4VUP",
+        "title": "Winter vegetable caponata",
+        "preparationTime": 60,
+        "directions": "1. Heat the oven to 200C/180C fan/ gas 6. Toss the squash and turnips in a roasting tin with half the oil and seasoning. Roast for 20-25 mins, until soft and charred at the edges.\n\n2. Heat the remaining oil in a large pan over a medium heat. Season and fry the leeks for a few minutes, until softened slightly. Add the squash, turnips, garlic and vinegar, and cook for about 2 mins until sticky. Stir in the capers, olives, raisins and tomatoes, fill the can with water, swill it around and add that, too. Reduce for 15-20 mins, partially covered with the lid, until the veg is tender. Stir in most of the basil and season. Scatter over the rest of the basil and serve with crusty bread.",
+        "slug": "winter-vegetable-caponata",
+        "price": 3.10,
+        "calories": 292,
+        "servingCount": 4,
+        "img": "winter-vegetable-caponata.jpg",
+        "ingredients": [
+            {
+                "_id": "20GVCGDLOYDEKRN8JWANJCY4",
+                "amountUnit": "g",
+                "amount": 200,
+                "name": "squash",
+                "price": 0.6
+            },
+            {
+                "_id": "436WRWHQQ1350HRMBZ0FY1BI",
+                "name": "turnips",
+                "amount": 250,
+                "amountUnit": "g",
+                "price": 0.4
+            },
+            {
+                "_id": "X6XO7ML5S4UXFX51DBR6NIFN",
+                "name": "olive oil",
+                "amount": 1,
+                "amountUnit": "spn",
+                "price": 0.15
+            },
+            {
+                "_id": "Z9OFM2ZJK7LPUN9FGEIY38T2",
+                "name": "leeks",
+                "amount": 2,
+                "amountUnit": "",
+                "price": 0.25
+            },
+            {
+                "_id": "1CFHBS3YNACQADMK8HZZIOXG",
+                "name": "garlic cloves",
+                "amountUnit": "",
+                "amount": 2,
+                "price": 0.4
+            },
+            {
+                "_id": "UFW8Q9GCPDTIPTQZALQRXEAV",
+                "name": "balsamic vinegar",
+                "amountUnit": "spn",
+                "amount": 2,
+                "price": 0.2
+            },
+            {
+                "_id": "WIN06YKHHGK9EJUDCOHJDUEZ",
+                "name": "black olives, chopped",
+                "amountUnit": "spn",
+                "amount": 2,
+                "price": 0.4
+            },
+            {
+                "_id": "YLESLFOVKJABTZ8R5R7KSKIE",
+                "name": "raisins",
+                "amountUnit": "spn",
+                "amount": 2,
+                "price": 0.4
+            },
+            {
+                "_id": "RP4T052AMM129PCW7UYBHAWS",
+                "name": "crusty bread",
+                "amountUnit": "",
+                "amount": 1,
+                "price": 0.3
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

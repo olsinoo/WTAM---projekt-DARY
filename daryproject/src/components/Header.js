@@ -1,18 +1,27 @@
 import { Link } from "react-router-dom";
+import React, { Component } from "react";
 import { useEffect, useState } from 'react';
 
-import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
+import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./Header.css";
 
 export function Header() {
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState(parseFloat(localStorage.getItem('price')));
+  const [lim, setLimit] = useState(parseFloat(localStorage.getItem('lim')));
 
 
-  useEffect(() => {
-    setPrice(parseFloat(localStorage.getItem('price')))
-}, [localStorage.getItem("price")])
+    useEffect(() => {
+
+      window.addEventListener('storage', () => {
+        const theme = parseFloat(localStorage.getItem('price'))
+        setPrice(theme);
+      })
+      setLimit(parseFloat(localStorage.getItem('lim')));
+
+
+}, [])
 
   return (
     <nav>
@@ -23,7 +32,7 @@ export function Header() {
         <div className="nav-topings-Name">
           <Link className="nav-recipe" to="/"><h3>Recipe</h3></Link>
           <Link className="nav-my-basket" to={"/recipes-basket"}>
-              <div>{ !price ? "" : Number(price).toFixed(2) + "eur"}  <FontAwesomeIcon icon={faShoppingBasket}/></div>
+              <div>{ !price ? "" : Number(price).toFixed(2) + "eur"}  {!lim ?  <FontAwesomeIcon icon={faBasketShopping}/> : price < lim ? <FontAwesomeIcon icon={faBasketShopping} color={"green"}/> : <FontAwesomeIcon icon={faBasketShopping} color={"red"}/>}</div>
           </Link>
         </div>
       </div>

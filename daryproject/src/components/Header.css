@@ -38,6 +38,7 @@ nav{
   text-decoration: none;
 }
 
+
 .nav-recipe h3 {
   font-size: 3rem;
   color: white;
@@ -48,3 +49,7 @@ nav{
   color: white;
 }
 
+.nav-recipe h3:hover,
+.nav-my-basket:hover {
+  color: rgba(255, 255, 255, 0.486);
+}

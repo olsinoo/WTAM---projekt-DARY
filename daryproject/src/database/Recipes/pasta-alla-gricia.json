@@ -1,0 +1,45 @@
+[
+    {
+        "_id": "YLESLFOVKJABTZ8R5R7KSKIE",
+        "title": "Pasta alla Gricia",
+        "preparationTime": 50,
+        "directions": "1. Cut the guanciale into larger pieces (2x1cm), which we put in a pot or deep pan with olive oil and start heating together on a medium flame. Roast slowly for about 10 minutes..\n\n2. Pour the pasta into the boiling water (we will use less water than usual to get a more starchy water for soaking). We do not add salt to the water - guanciale is salty enough. Cook the pasta al dente and drain to capture all the water.\n\n3. Remove the fried lobe from the pot, pour the released fat into a measuring cup and return only about a teaspoon of fat back to the pot. To this, add about half a liter of pasta water, add black pepper and cook everything together on the strongest flame until the sauce is reduced to about half (5-7 minutes).",
+        "slug": "pasta-alla-gricia",
+        "price": 2.60,
+        "calories": 315,
+        "servingCount": 4,
+        "img": "pasta-alla-gricia.jpg",
+        "ingredients": [
+            {
+                "_id": "RP4T052AMM129PCW7UYBHAWS",
+                "amountUnit": "g",
+                "amount": 200,
+                "name": "guanciale",
+                "price": 0.6
+            },
+            {
+                "_id": "TSVLGL6OEPSUO5QB0XP3WQ07",
+                "name": "olive oil",
+                "amount": 1,
+                "amountUnit": "spn",
+                "price": 0.15
+            },
+            {
+                "_id": "VVMCVBJTGSJM4VUP20GVCGDL",
+                "name": "pasta",
+                "amount": 400,
+                "amountUnit": "g",
+                "price": 1.5
+            },
+            {
+                "_id": "OYDEKRN8JWANJCX4436WRWHQ",
+                "name": "Grated cheese",
+                "amount": 50,
+                "amountUnit": "g",
+                "price": 0.35
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

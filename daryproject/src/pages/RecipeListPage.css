@@ -26,8 +26,7 @@
   flex: 12 1 15rem;
 }
 
-.RecipeListPage-header-button-link,
-.RecipeListPage-advancedFilter{
+.RecipeListPage-header-button-link{
   flex: 1 1 10rem;
 }
 
@@ -38,10 +37,47 @@
 .search-input{
   width: 100%;
   padding-left: 1.5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   border: 0.1rem solid rgb(1, 1, 41);
 }
 
 .search-inpup :active {
   border: 0.3rem solid rgb(10, 10, 197);
+}
+
+.RecipeListPage-filters{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  
+}
+
+.RecipeListPage-filters input{
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.RecipeListPage-filters-servingCount,
+.RecipeListPage-filters-maxSum,
+.RecipeListPage-filters-dilikedIngredients,
+.RecipeListPage-filters-likedIngredinets{
+  display: flex;
+  flex-direction: column;
+}
+
+.RecipeListPage-showChoosenFilters{
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.RecipeListPage-showChoosenFilters p{
+  font-size: 2rem;
+}
+
+.RecipeListPage-ResetFilter{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
 }

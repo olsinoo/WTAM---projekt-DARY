@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
 import { ListOfIngredients } from '../components/ListOfIngredients';
 import { RecipesList } from '../components/RecipesList'; 
 
 
 import "./MyListOfRecipesPage.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export function MyRecipesList(){
     const recipes =  
                 Object.keys(localStorage).map(
                     key => {
 
-                        if (key !== "price"){
+                        if ((key !== "price") && (key !== "lim")){
                             return JSON.parse(localStorage.getItem(key));  
                         }
                     }).filter(item => item);
@@ -31,6 +31,11 @@ export function MyRecipesList(){
             </div> 
         );
    
+    }
+
+    const changeLimit = () =>{
+        localStorage.setItem('lim', document.getElementById('txt1').value);
+        window.dispatchEvent(new Event('storage'));
     }
 
     const ingredientsArray = getIngredients();
@@ -57,6 +62,13 @@ export function MyRecipesList(){
 
     return(
         <div className='basket'>
+            <div className='basket-your-limit'>
+                <form className='basket-your-limit-form'>
+                    <label>Your basket limit: </label>
+                    <input type="text" id="txt1" defaultValue={localStorage.getItem('lim')} className='basket-your-limit-form-input'/>
+                    <button className='button-green' onClick={() => changeLimit()}>Change <FontAwesomeIcon/>  </button>
+                </form>
+            </div>
             <div className='basket-your-shopping-list'>
                 Your Shopping List:
             </div>
@@ -74,5 +86,4 @@ export function MyRecipesList(){
         </div>
 
     )
-
 }

@@ -5,7 +5,6 @@ export function ListOfIngredients({ingredients}){
 
     
     const ShowIngredient = ({ingredient}) => {
-        console.log(ingredient)
         return (
         <li className='RecipeDetailPage-ingredient'>
             <div className='RecipeDetailPage-ingredient-ingredientAmount'>
