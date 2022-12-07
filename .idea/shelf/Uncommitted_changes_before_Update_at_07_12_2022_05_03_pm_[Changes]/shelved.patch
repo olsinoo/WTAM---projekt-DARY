@@ -1,0 +1,155 @@
+Index: daryproject/src/database/listOfRecipes.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[\r\n    {\r\n        \"_id\": \"5bf6cbef6ac34b001baef483\",\r\n        \"title\": \"Root Veggie Fries\",\r\n        \"preparationTime\": 50,\r\n        \"slug\": \"root-veggie-fries\",\r\n        \"lastModifiedDate\": \"2022-11-12T14:37:13.403Z\",\r\n        \"price\": 0.68,\r\n        \"calories\": 315,\r\n        \"countOfServing\": 4,\r\n        \"img\": \"root-veggie-fries-ck.jpg\"\r\n    },\r\n    {\r\n        \"_id\": \"5bf6cbef6ac34b001baef482\",\r\n        \"title\": \"Root Veggie Fries1\",\r\n        \"preparationTime\": 50,\r\n        \"slug\": \"root-veggie-fries1\",\r\n        \"lastModifiedDate\": \"2022-11-12T14:37:13.403Z\",\r\n        \"price\": 0.68,\r\n        \"calories\": 315,\r\n        \"countOfServing\": 4,\r\n        \"img\": \"root-veggie-fries-ck.jpg\"\r\n    },\r\n    {\r\n        \"_id\": \"5b4f00f4f275000019d0c3b6\",\r\n        \"title\": \"Chocolate cheesecake\",\r\n        \"preparationTime\":45,\r\n        \"slug\": \"Chocolate-cheesecake\",\r\n        \"lastModifiedDate\": \"2018-10-05T19:25:38.083Z\",\r\n        \"price\": 1.10,\r\n        \"calories\": 420,\r\n        \"countOfServing\": 4,\r\n        \"img\": \"root-veggie-fries-ck.jpg\"\r\n    }\r\n]\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/daryproject/src/database/listOfRecipes.json b/daryproject/src/database/listOfRecipes.json
+--- a/daryproject/src/database/listOfRecipes.json	(revision af60bb10f2544e4ac2be9a48dc2919d00f630a2d)
++++ b/daryproject/src/database/listOfRecipes.json	(date 1669226572811)
+@@ -11,17 +11,6 @@
+         "img": "root-veggie-fries-ck.jpg"
+     },
+     {
+-        "_id": "5bf6cbef6ac34b001baef482",
+-        "title": "Root Veggie Fries1",
+-        "preparationTime": 50,
+-        "slug": "root-veggie-fries1",
+-        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+-        "price": 0.68,
+-        "calories": 315,
+-        "countOfServing": 4,
+-        "img": "root-veggie-fries-ck.jpg"
+-    },
+-    {
+         "_id": "5b4f00f4f275000019d0c3b6",
+         "title": "Chocolate cheesecake",
+         "preparationTime":45,
+@@ -32,4 +21,5 @@
+         "countOfServing": 4,
+         "img": "root-veggie-fries-ck.jpg"
+     }
++
+ ]
+Index: daryproject/src/pages/RecipeListPage.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { useEffect, useState } from 'react';\r\nimport { Link } from 'react-router-dom';\r\n\r\nimport { faUtensils } from '@fortawesome/free-solid-svg-icons';\r\nimport { FontAwesomeIcon } from '@fortawesome/react-fontawesome';\r\n\r\nimport listOfRecipes from '../database/listOfRecipes.json'\r\nimport { SearchInput } from '../components/SearchInput';\r\nimport { RecipesList } from '../components/RecipesList';\r\n\r\nimport './RecipeListPage.css';\r\n\r\nexport function RecipeListPage() {\r\n    const [recipes, setRecipes] = useState([]);\r\n    const [searchValue, setSearchValue] = useState('');\r\n\r\n    const filterredRecipes = recipes.filter((recipe) =>\r\n        recipe.title.toLowerCase().includes(searchValue.toLowerCase()),\r\n    );\r\n\r\n    useEffect(() => {\r\n        setRecipes(listOfRecipes)\r\n    }, [])\r\n\r\n\r\n    return(\r\n        <div className=\"RecipeListPage-section\">\r\n            <div className=\"RecipeListPage-header\">\r\n                <div className=\"RecipeListPage-advancedFilter\">\r\n                    <button className=\"button-green\">Advanced Filter</button>\r\n                </div>\r\n                <div className=\"RecipeListPage-underHeader-searchButton\">\r\n                    <SearchInput\r\n                        value={searchValue}\r\n                        onChange={(event) => setSearchValue(event.target.value)}/>\r\n                    \r\n                </div>\r\n                <Link className=\"RecipeListPage-header-button-link\" to={'/new-recipe'}>\r\n                    <button className=\"button-green\">\r\n                    <FontAwesomeIcon icon={faUtensils} /> New Recipe\r\n                    </button>\r\n                </Link>\r\n            </div>\r\n            <div className=\"RecipeListPage-Reipe-records\">\r\n                    <h2>Aviable Recipes: {filterredRecipes.length} </h2>\r\n            </div>\r\n            <RecipesList recipes={filterredRecipes} />\r\n        </div>\r\n    );\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/daryproject/src/pages/RecipeListPage.js b/daryproject/src/pages/RecipeListPage.js
+--- a/daryproject/src/pages/RecipeListPage.js	(revision af60bb10f2544e4ac2be9a48dc2919d00f630a2d)
++++ b/daryproject/src/pages/RecipeListPage.js	(date 1669224255470)
+@@ -42,7 +42,7 @@
+                 </Link>
+             </div>
+             <div className="RecipeListPage-Reipe-records">
+-                    <h2>Aviable Recipes: {filterredRecipes.length} </h2>
++                    <h2>Available Recipes: {filterredRecipes.length} </h2>
+             </div>
+             <RecipesList recipes={filterredRecipes} />
+         </div>
+Index: daryproject/src/database/Recipes/root-veggie-fries1.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/daryproject/src/database/Recipes/root-veggie-fries1.json b/daryproject/src/database/Recipes/tortilla-pizza.json
+rename from daryproject/src/database/Recipes/root-veggie-fries1.json
+rename to daryproject/src/database/Recipes/tortilla-pizza.json
+--- a/daryproject/src/database/Recipes/root-veggie-fries1.json	(revision af60bb10f2544e4ac2be9a48dc2919d00f630a2d)
++++ b/daryproject/src/database/Recipes/tortilla-pizza.json	(date 1669226572771)
+@@ -1,10 +1,10 @@
+ [
+     {
+-        "_id": "5bf6cbef6ac34b001baef482",
+-        "title": "Root Veggie Fries1",
++        "_id": "5bf6cbef6ac34b001baef483",
++        "title": "Tortilla Pizza",
+         "preparationTime": 50,
+-        "directions": "1. Place a baking sheet in oven.Preheat oven to 450° (leave pan in oven).\n\n2. Combine potatoes, carrots, parsnips, canola oil, garlic powder, and ground red pepper.\n\n3.Arrange vegetables in a single layer on preheated pan.\n\n4.Roast at 450° for 30 minutes or until crisp and browned, stirring after 20 minutes.\n\n5.Sprinkle with salt.",
+-        "slug": "root-veggie-fries1",
++        "directions": "1. Place a baking sheet in oven.Preheat oven to 450° (leave pan in oven).\n\n2. Combine potatoes, carrots, parsnips, canola oil, garlic powder, and ground red pepper.\n\n3. Arrange vegetables in a single layer on preheated pan.\n\n4. Roast at 450° for 30 minutes or until crisp and browned, stirring after 20 minutes.\n\n5. Sprinkle with salt.",
++        "slug": "root-veggie-fries",
+         "price": 2.28,
+         "calories": 315,
+         "servingCount": 4,
+Index: plan.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>1.týždeň(7-13) : základná kostra stranky - HTML\r\n2.týždeň(14-20): úvodná stránka, databáza receptov(postup, ingrediencie, obrázky) \r\n3.týždeň(21-27): stránka s detailom receptu, košík(pridanie receptov, zobrazenie celkovej ceny, zoznam potrebných ingrediencií) \r\n4.týždeň(28-4): filtre(celková suma jedla, alergény, počet osôb), css \r\n5.týždeň(5-11): testovanie a oprava buggov, prvá verzia webowej stránky s plnou funkcionalitou z testovania
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/plan.txt b/plan.txt
+--- a/plan.txt	(revision af60bb10f2544e4ac2be9a48dc2919d00f630a2d)
++++ b/plan.txt	(date 1668624842167)
+@@ -2,4 +2,4 @@
+ 2.týždeň(14-20): úvodná stránka, databáza receptov(postup, ingrediencie, obrázky) 
+ 3.týždeň(21-27): stránka s detailom receptu, košík(pridanie receptov, zobrazenie celkovej ceny, zoznam potrebných ingrediencií) 
+ 4.týždeň(28-4): filtre(celková suma jedla, alergény, počet osôb), css 
+-5.týždeň(5-11): testovanie a oprava buggov, prvá verzia webowej stránky s plnou funkcionalitou z testovania
+\ No newline at end of file
++5.týždeň(5-11): testovanie a oprava buggov, prvá verzia webowej stránky s plnou funkcionalitou z testovania
+Index: daryproject/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"daryproject\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"@fortawesome/free-solid-svg-icons\": \"^6.2.0\",\r\n    \"@fortawesome/react-fontawesome\": \"^0.2.0\",\r\n    \"@testing-library/jest-dom\": \"^5.16.5\",\r\n    \"@testing-library/react\": \"^13.4.0\",\r\n    \"@testing-library/user-event\": \"^13.5.0\",\r\n    \"react\": \"^18.2.0\",\r\n    \"react-dom\": \"^18.2.0\",\r\n    \"react-markdown\": \"^8.0.3\",\r\n    \"react-scripts\": \"5.0.1\",\r\n    \"web-vitals\": \"^2.1.4\"\r\n  },\r\n  \"scripts\": {\r\n    \"start\": \"react-scripts start\",\r\n    \"build\": \"react-scripts build\",\r\n    \"test\": \"react-scripts test\",\r\n    \"eject\": \"react-scripts eject\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": [\r\n      \"react-app\",\r\n      \"react-app/jest\"\r\n    ]\r\n  },\r\n  \"browserslist\": {\r\n    \"production\": [\r\n      \">0.2%\",\r\n      \"not dead\",\r\n      \"not op_mini all\"\r\n    ],\r\n    \"development\": [\r\n      \"last 1 chrome version\",\r\n      \"last 1 firefox version\",\r\n      \"last 1 safari version\"\r\n    ]\r\n  },\r\n  \"devDependencies\": {\r\n    \"react-router-dom\": \"^6.4.3\"\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/daryproject/package.json b/daryproject/package.json
+--- a/daryproject/package.json	(revision af60bb10f2544e4ac2be9a48dc2919d00f630a2d)
++++ b/daryproject/package.json	(date 1668624309976)
+@@ -8,6 +8,7 @@
+     "@testing-library/jest-dom": "^5.16.5",
+     "@testing-library/react": "^13.4.0",
+     "@testing-library/user-event": "^13.5.0",
++    "all": "^0.0.0",
+     "react": "^18.2.0",
+     "react-dom": "^18.2.0",
+     "react-markdown": "^8.0.3",
+Index: daryproject/package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/daryproject/package-lock.json b/daryproject/package-lock.json
+--- a/daryproject/package-lock.json	(revision af60bb10f2544e4ac2be9a48dc2919d00f630a2d)
++++ b/daryproject/package-lock.json	(date 1668624309976)
+@@ -13,6 +13,7 @@
+         "@testing-library/jest-dom": "^5.16.5",
+         "@testing-library/react": "^13.4.0",
+         "@testing-library/user-event": "^13.5.0",
++        "all": "^0.0.0",
+         "react": "^18.2.0",
+         "react-dom": "^18.2.0",
+         "react-markdown": "^8.0.3",
+@@ -4815,6 +4816,11 @@
+         "ajv": "^6.9.1"
+       }
+     },
++    "node_modules/all": {
++      "version": "0.0.0",
++      "resolved": "https://registry.npmjs.org/all/-/all-0.0.0.tgz",
++      "integrity": "sha512-0oKlfNVv2d+d7c1gwjGspzgbwot47PGQ4b3v1ccx4mR8l9P/Y6E6Dr/yE8lNT63EcAKEbHo6UG3odDpC/NQcKw=="
++    },
+     "node_modules/ansi-escapes": {
+       "version": "4.3.2",
+       "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-4.3.2.tgz",
+@@ -21354,6 +21360,11 @@
+       "integrity": "sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==",
+       "requires": {}
+     },
++    "all": {
++      "version": "0.0.0",
++      "resolved": "https://registry.npmjs.org/all/-/all-0.0.0.tgz",
++      "integrity": "sha512-0oKlfNVv2d+d7c1gwjGspzgbwot47PGQ4b3v1ccx4mR8l9P/Y6E6Dr/yE8lNT63EcAKEbHo6UG3odDpC/NQcKw=="
++    },
+     "ansi-escapes": {
+       "version": "4.3.2",
+       "resolved": "https://registry.npmjs.org/ansi-escapes/-/ansi-escapes-4.3.2.tgz",
+diff --git a/daryproject/src/database/listOfIngredients.json b/daryproject/src/database/listOfIngredients.json
+new file mode 100644
