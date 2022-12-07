@@ -112,8 +112,9 @@
 }
 
 
-.RecipeDetailPage-Ingredients-priceOfAllIngredients p{
+.RecipeDetailPage-Ingredients-priceOfAllIngredients{
   font-weight: bold;
+  padding-left: 2rem;
 } 
 
 .reactmarckDown{
@@ -178,4 +179,11 @@
 
 .RecipeDetailPage-Directions{
   margin-top: 2rem;
+}
+
+.RecipeDetailPage-section-buttonBack{
+  margin-top: 1.5rem;
+  background: none;
+  color:rgb(40, 167, 69);
+  font-size: 3rem;
 }
