@@ -3,7 +3,6 @@ import { RecipesList } from '../components/RecipesList';
 
 
 import "./MyListOfRecipesPage.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export function MyRecipesList(){
     const recipes =  
@@ -31,11 +30,6 @@ export function MyRecipesList(){
             </div> 
         );
    
-    }
-
-    const changeLimit = () =>{
-        localStorage.setItem('lim', document.getElementById('txt1').value);
-        window.dispatchEvent(new Event('storage'));
     }
 
     const ingredientsArray = getIngredients();
@@ -66,7 +60,7 @@ export function MyRecipesList(){
                 <form className='basket-your-limit-form'>
                     <label>Your basket limit: </label>
                     <input type="text" id="txt1" defaultValue={localStorage.getItem('lim')} className='basket-your-limit-form-input'/>
-                    <button className='button-green' onClick={() => changeLimit()}>Change <FontAwesomeIcon/>  </button>
+                    <button className='button-green' onClick={() => localStorage.setItem('lim', document.getElementById('txt1').value)}>Change</button>
                 </form>
             </div>
             <div className='basket-your-shopping-list'>
