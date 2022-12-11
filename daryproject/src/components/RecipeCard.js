@@ -29,7 +29,7 @@ export function RecipeCard({ title, preparationTime, slug, price, calories, coun
             <div className='RecipeCard-bodyText' hidden={() => onmouseleave}>
                 <div className="RecipeCard-noHoverMenu">
                   <h2 className="RecipeCard-title">{title.length > 30 ? title.slice(0, 30) + "..." : title}</h2>
-                  <p className="RecipeCard-price">{price} eur</p>
+                  <p className="RecipeCard-price">{price} &euro;</p>
                 </div>
                 <div className="RecipeCard-time">
                   <p>{convertPreparatonTime() === "Not added time" ? "" :<FontAwesomeIcon icon={faClock} />  } {convertPreparatonTime()}</p>

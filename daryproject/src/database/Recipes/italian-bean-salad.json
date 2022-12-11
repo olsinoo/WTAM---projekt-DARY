@@ -1,0 +1,66 @@
+[
+    {
+        "_id": "53056fd4-763f-11ed-a1eb-0242ac120002",
+        "title": "Italian Bean Salad",
+        "preparationTime": 25,
+        "directions": "1. Finely chop the spring onions and put into a bowl with the garlic and the chilli. Mix in the cannellini beans and the butter beans. Whisk the olive oil with the white wine vinegar and add plenty of seasoning. Stir through the salad with plenty of chopped parsley.",
+        "slug": "italian-bean-salad",
+        "price": 1.50,
+        "calories": 150,
+        "servingCount": 4,
+        "img": "italian-bean-salad.jpg",
+        "ingredients": [
+            {
+                "_id": "75c2c958-7640-11ed-a1eb-0242ac120002",
+                "name": "onion",
+                "amount": 1,
+                "amountUnit": "pcs",
+                "price": 0.3
+            },
+            {
+                "_id": "9436a062-7640-11ed-a1eb-0242ac120002",
+                "name": "garlic",
+                "amount": 2,
+                "amountUnit": "pcs",
+                "price": 0.2
+            },
+            {
+                "_id": "ad653e2c-7640-11ed-a1eb-0242ac120002",
+                "name": "red chilli",
+                "amount": 1,
+                "amountUnit": "g",
+                "price": 0.3
+            },
+            {
+                "_id": "b4bbc5e2-7640-11ed-a1eb-0242ac120002",
+                "name": "beans",
+                "amount": 800,
+                "amountUnit": "g",
+                "price": 0.1
+            },
+            {
+                "_id": "be7f52b0-7640-11ed-a1eb-0242ac120002",
+                "name": "butter beans",
+                "amountUnit": "pcs",
+                "amount": 1,
+                "price": 0.2
+            },
+            {
+                "_id": "61f56caa-7640-11ed-a1eb-0242ac120002",
+                "name": "olive oil",
+                "amountUnit": "spn",
+                "amount": 6,
+                "price": 0.2
+            },
+            {
+                "_id": "c64bb4a2-7640-11ed-a1eb-0242ac120002",
+                "name": "white wine",
+                "amountUnit": "spn",
+                "amount": 2,
+                "price": 0.2
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

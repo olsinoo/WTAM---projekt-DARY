@@ -1,5 +1,17 @@
 [
     {
+        "_id": "0747982e-763f-11ed-a1eb-0242ac120002",
+        "title": "Chocolate molten cakes",
+        "preparationTime":45,
+        "slug": "chocolate-molten-cakes",
+        "lastModifiedDate": "2021-08-22T19:25:38.083Z",
+        "price": 1.60,
+        "calories": 320,
+        "countOfServing": 4,
+        "img": "chocolate-molten-cakes.jpg",
+        "ingredients": ["flour", "egg", "milk", "sunflower oil", "lemon", "sugar", "beef mince"]
+    },
+    {
         "_id": "5bf6cbef6ac34b001baef483",
         "title": "Root Veggie Fries",
         "preparationTime": 50,
@@ -10,6 +22,18 @@
         "countOfServing": 4,
         "img": "root-veggie-fries-ck.jpg",
         "ingredients": ["potato", "carrot", "parsnip"]
+    },
+    {
+        "_id": "b6f857ea-763f-11ed-a1eb-0242ac120002",
+        "title": "Rocky road",
+        "preparationTime":50,
+        "slug": "rocky-road",
+        "lastModifiedDate": "2016-10-04T19:25:38.083Z",
+        "price": 3.20,
+        "calories": 460,
+        "countOfServing": 4,
+        "img": "rocky-road.jpg",
+        "ingredients": ["biscuits", "butter", "chocolate", "golden syrup", "marshmallows", "sugar"]
     },
     {
         "_id": "0XP3WQ07VVMCVBJTGSJM4VUP",
@@ -95,7 +119,7 @@
         "countOfServing": 4,
         "img": "microwave-banana-pudding.jpg",
         "ingredients":["butter", "bananas", "egg", "milk"]
-    },
+    },  
     {
         "_id": "WIN06YKHHGK9EJUDCOHJDUEZ",
         "title": "Celery soup",
@@ -107,5 +131,42 @@
         "countOfServing": 4,
         "img": "celery-soup.jpg",
         "ingredients":["celery", "potato", "milk"]
+    },
+    {
+        "_id": "2502e058-763f-11ed-a1eb-0242ac120002",
+        "title": "Classic Lasagne",
+        "preparationTime":60,
+        "slug": "classic-lasagne",
+        "lastModifiedDate": "2022-11-16T19:25:38.083Z",
+        "price": 1.05,
+        "calories": 400,
+        "countOfServing": 4,
+        "img": "classic-lasagne.jpg",
+        "ingredients": ["olive oil", "bacon", "onion", "celery stick", "carrot", "garlic", "beef mince"]
+    },
+    {
+        "_id": "ad0bb13c-763f-11ed-a1eb-0242ac120002",
+        "title": "Pancakes",
+        "preparationTime":15,
+        "slug": "pancakes",
+        "lastModifiedDate": "2020-12-12T19:25:38.083Z",
+        "price": 0.75,
+        "calories": 225,
+        "countOfServing": 4,
+        "img": "pancakes.jpg",
+        "ingredients": ["flour", "egg", "milk", "sunflower oil", "lemon", "sugar", "beef mince"]
+    },
+
+    {
+        "_id": "53056fd4-763f-11ed-a1eb-0242ac120002",
+        "title": "Italian bean salad",
+        "preparationTime":25,
+        "slug": "italian-bean-salad",
+        "lastModifiedDate": "2017-02-14T19:25:38.083Z",
+        "price": 1.50,
+        "calories": 150,
+        "countOfServing": 4,
+        "img": "italian-bean-salad.jpg",
+        "ingredients": ["onion", "garlic", "red chilli", "beans", "butter beans", "olive oil", "white wine"]
     }
 ]
