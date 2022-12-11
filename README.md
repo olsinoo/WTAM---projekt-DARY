@@ -6,3 +6,6 @@ Cieľom našej aplikácie je vytvoriť webovú aplikáciu s databázou receptov,
 
 Zdieľaný dokument špecifikácie:
 https://docs.google.com/document/d/1Eld4BX-sXHwcnmCULH8mev2rTBanxrzZ/edit
+
+Link na webstránku s projektom:
+https://dary-project.netlify.app/
