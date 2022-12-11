@@ -14,7 +14,7 @@ export function MyRecipesList(){
                         }
                     }).filter(item => item);
     
-    
+    let test;
                     
     const getIngredients = () => {
         return recipes.map(recipe =>
@@ -54,14 +54,13 @@ export function MyRecipesList(){
         return Object.keys(updatedIngredinets).map( key => updatedIngredinets[key]);
     }
 
+
     return(
         <div className='basket'>
             <div className='basket-your-limit'>
                 <form className='basket-your-limit-form'>
                     <label>Your basket limit: </label>
-                    <input type="text" id="txt1" defaultValue={localStorage.getItem('lim')} className='basket-your-limit-form-input'/>
-                    <button className='button-green' onClick={() => localStorage.setItem('lim', document.getElementById('txt1').value)}>Change</button>
-                </form>
+                    <input type="number" id="txt1" defaultValue={localStorage.getItem('lim') } onChange={(e) => localStorage.setItem('lim', JSON.stringify(e.target.value))} className='basket-your-limit-form-input'/>                </form>
             </div>
             <div className='basket-your-shopping-list'>
                 Your Shopping List:
