@@ -9,7 +9,7 @@ export function MyRecipesList(){
                 Object.keys(localStorage).map(
                     key => {
 
-                        if ((key !== "price") && (key !== "lim") && (key !== "servingCount") && (key !== "dislikedIngredients") && (key !== "likedIngredients")){
+                        if ((key !== "price") && (key !== "lim") && (key !== "servingCount") && (key !== "allergens") && (key !== "likedIngredients")){
                             return JSON.parse(localStorage.getItem(key));  
                         }
                     }).filter(item => item);
