@@ -106,7 +106,7 @@ export function RecipeDetailPage() {
                         <FontAwesomeIcon icon={faFire} /> {Number(recipe.calories).toFixed(0)} kcal
                     </h5>
                     <h5>
-                        <FontAwesomeIcon icon={faMoneyBill} /> {Number(recipe.price).toFixed(2)} eur
+                        <FontAwesomeIcon icon={faMoneyBill} /> {Number(recipe.price).toFixed(2)} &euro;
                     </h5>
             </div>
             <div className='RecipeDetailPage-body'>
