@@ -34,7 +34,7 @@ export function MyRecipesList(){
 
         return ( 
             <div className='basket-price'>
-                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + "&euro;" : "" }
+                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + " €" : "" }
             </div> 
         );
    
