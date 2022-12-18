@@ -93,44 +93,29 @@ export function RecipeListPage() {
     }
     
     const resetFilters = () => {
-        localStorage.removeItem("lim");
-        localStorage.removeItem("servingCount");
         localStorage.removeItem("allergens");
-        
-        setRecipes(recipes.map(recipe => {
-            return {...recipe,
-                    price: Number(recipe.price / recipe.countOfServing * 4).toFixed(2),
-                    countOfServing: 4
-                    }
-            }));
+        setSearchValue("");
         window.dispatchEvent(new Event('storage'));
     }
+
+    // const resetOptions = () => {
+    //     localStorage.removeItem("lim");
+    //     localStorage.removeItem("servingCount");
+    //     setRecipes(recipes.map(recipe => {
+    //         return {...recipe,
+    //                 price: Number(recipe.price / recipe.countOfServing * 4).toFixed(2),
+    //                 countOfServing: 4
+    //                 }
+    //         }));
+    //     document.getElementById('maxSum').value = "";
+    //     window.dispatchEvent(new Event('storage'));
+    // }
 
     
     
     return(
         <div className="RecipeListPage-section">
             <div className="RecipeListPage-header">
-                <div className="RecipeListPage-options">
-                    <h3>Options</h3>
-                    <div className='RecipeListPage-options-body'>
-                        <div className="RecipeListPage-options-servingCount">
-                            <label htmlFor="">Serving Count </label>
-                            <div className='RecipeListPage-options-servingCount-input'>
-                                <FontAwesomeIcon icon={faPeopleGroup} />
-                                <input type="number" min="1" max="99"  value={localStorage.getItem("servingCount")  !== null ? localStorage.getItem("servingCount") : recipes[0]?.countOfServing} onChange={updateServingCount} />
-                            </div>
-                        </div>
-                        <div className="RecipeListPage-options-maxSum">
-                            <label htmlFor="">Budget Limit for <FontAwesomeIcon icon={faBasketShopping} /></label>
-                            <div className='RecipeListPage-options-maxSum-input'>
-                                <input type="number" min="0" max="99" step="0.1" placeholder='Set Lim' onChange={setMaxSumToToLocalStorage} />
-                                &euro;
-                            </div>
-                        </div>
-                    </div>
-                </div>
-             
                 <div className="RecipeListPage-filters">
                     <h3>Filters</h3>
                     <div className="RecipeListPage-underHeader-searchButton">
@@ -141,19 +126,7 @@ export function RecipeListPage() {
                     </div>
                     <div className="RecipeListPage-filters-allergens">
                         <label>Allergens: </label>
-                        <div className='RecipeListPage-filters-allergens-choosenAllergens'>
-                            {
-                                JSON.parse(localStorage.getItem("allergens"))?.map(allergen => {
-                                    return (
-                                        <div className='RecipeListPage-filters-allergen' key={allergen}>
-                                            {allergen}
-                                            <button value={allergen} id={allergen} onClick={removeAllergenFromFilter}>Х</button>
-                                        </div>
-                                    );
-                                }) 
-                        
-                            }
-                        </div>
+                       
                         <div className='RecipeListPage-filters-allergens-input '>
                             <input onfocus="this.value=''" list="allergens" placeholder="Write here allergen" onChange={updateallergens}/>
                             <datalist id="allergens">
@@ -169,11 +142,50 @@ export function RecipeListPage() {
                             }
                             </datalist>
                         </div>
+                      
                     </div>
+                    <div className='RecipeListPage-filters-allergens-choosenAllergens'>
+                            {
+                                JSON.parse(localStorage.getItem("allergens"))?.map(allergen => {
+                                    return (
+                                        <div className='RecipeListPage-filters-allergen' key={allergen}>
+                                            {allergen}
+                                            <button value={allergen} id={allergen} onClick={removeAllergenFromFilter}>Х</button>
+                                        </div>
+                                    );
+                                }) 
+                        
+                            }
+                        </div>
                     <div className='RecipeListPage-ResetFilter'>
                         <button className='button-green' onClick={resetFilters}>Reset Filters</button>
                     </div>
                 </div>  
+                <div className="RecipeListPage-options">
+                    <h3>Options</h3>
+                    <div className='RecipeListPage-options-body'>
+                        <div className="RecipeListPage-options-servingCount">
+                            <label >Serving Count </label>
+                            <div className='RecipeListPage-options-servingCount-input'>
+                                
+                                <input type="number" min="1" max="99"  value={localStorage.getItem("servingCount")  !== null ? localStorage.getItem("servingCount") : recipes[0]?.countOfServing} onChange={updateServingCount} />
+                                <FontAwesomeIcon icon={faPeopleGroup} />
+                            </div>
+                        </div>
+                        <div className="RecipeListPage-options-maxSum">
+                            <label >Budget Limit for <FontAwesomeIcon icon={faBasketShopping} /></label>
+                            <div className='RecipeListPage-options-maxSum-input'>
+                                <input id="maxSum" type="number" min="0" max="99" step="0.1" placeholder='Set Lim' onChange={setMaxSumToToLocalStorage} />
+                                &euro;
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className='RecipeListPage-ResetOptions'>
+                        <button className='button-blue' onClick={resetOptions}>Reset Options</button>
+                    </div> */}
+                </div>
+             
+   
                 
             </div>
             <div className="RecipeListPage-Reipe-records">
