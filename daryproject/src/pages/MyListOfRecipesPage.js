@@ -1,10 +1,19 @@
 import { ListOfIngredients } from '../components/ListOfIngredients';
-import { RecipesList } from '../components/RecipesList'; 
-
+import { BasketRecipes } from '../components/BasketRecipes';
+import { useEffect, useState } from 'react';
 
 import "./MyListOfRecipesPage.css";
 
 export function MyRecipesList(){
+    const [updatePrice, setUpdatePrice] = useState();
+
+    useEffect(() => {
+        window.addEventListener('storage', () => {
+            const theme = localStorage.getItem("price");
+            setUpdatePrice(theme);
+        })
+    }, [])
+
     const recipes =  
                 Object.keys(localStorage).map(
                     key => {
@@ -14,7 +23,6 @@ export function MyRecipesList(){
                         }
                     }).filter(item => item);
     
-    let test;
                     
     const getIngredients = () => {
         return recipes.map(recipe =>
@@ -26,7 +34,7 @@ export function MyRecipesList(){
 
         return ( 
             <div className='basket-price'>
-                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + " &euro;" : "" }
+                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + "&euro;" : "" }
             </div> 
         );
    
@@ -60,22 +68,26 @@ export function MyRecipesList(){
             <div className='basket-your-limit'>
                 <form className='basket-your-limit-form'>
                     <label>Your basket limit: </label>
-                    <input type="number" id="txt1" defaultValue={localStorage.getItem('lim') } onChange={(e) => localStorage.setItem('lim', JSON.stringify(e.target.value))} className='basket-your-limit-form-input'/>                </form>
+                    <input type="number" id="txt1" defaultValue={JSON.parse(localStorage.getItem('lim')) } onChange={(e) => localStorage.setItem('lim', JSON.stringify(e.target.value))} className='basket-your-limit-form-input'/>                </form>
             </div>
-            <div className='basket-your-shopping-list'>
-                Your Shopping List:
-            </div>
-            <div className='basket-ingredients'>
-                <ListOfIngredients  ingredients={sortedIngredients()}/>
-            </div>
-            <GetPrice/>
-            <div className='choosen-recipes'>
-                Choosen recipes:
-            </div>
-            <div className='basket-recipes'>
-                <RecipesList recipes={recipes}  />
-            </div>
-            
+            <section className='basket-recipes'>
+                <div className='choosen-recipes'>
+                    Choosen recipes
+                </div>
+                <div className='basket-recipes'>
+                    <BasketRecipes recipes={recipes}  />
+                </div>
+            </section>
+
+            <section>
+                <div className='basket-your-shopping-list'>
+                    Your Shopping List
+                </div>
+                <div className='basket-ingredients'>
+                    <ListOfIngredients  ingredients={sortedIngredients()}/>
+                </div>
+                <GetPrice/>
+            </section>
         </div>
 
     )

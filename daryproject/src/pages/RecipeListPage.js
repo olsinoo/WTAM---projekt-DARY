@@ -125,7 +125,7 @@ export function RecipeListPage() {
                         
                     </div>
                     <div className="RecipeListPage-filters-allergens">
-                        <label>Allergens: </label>
+                        <label>Allergens </label>
                        
                         <div className='RecipeListPage-filters-allergens-input '>
                             <input onfocus="this.value=''" list="allergens" placeholder="Write here allergen" onChange={updateallergens}/>
@@ -170,14 +170,14 @@ export function RecipeListPage() {
                             <label >Serving Count </label>
                             <div className='RecipeListPage-options-servingCount-input'>
                                 
-                                <input type="number" min="1" max="99"  value={localStorage.getItem("servingCount")  !== null ? localStorage.getItem("servingCount") : recipes[0]?.countOfServing} onChange={updateServingCount} />
+                                <input type="number" min="1" max="99"  value={localStorage.getItem("servingCount")  !== null ? JSON.parse(localStorage.getItem("servingCount")) : recipes[0]?.countOfServing} onChange={updateServingCount} />
                                 <FontAwesomeIcon icon={faPeopleGroup} />
                             </div>
                         </div>
                         <div className="RecipeListPage-options-maxSum">
                             <label >Budget Limit for <FontAwesomeIcon icon={faBasketShopping} /></label>
                             <div className='RecipeListPage-options-maxSum-input'>
-                                <input id="maxSum" type="number" min="0" max="99" step="0.1" placeholder='Set Lim' onChange={setMaxSumToToLocalStorage} />
+                                <input id="maxSum" type="number" min="0" max="99" step="0.1" value={localStorage.getItem("lim") !== null ? JSON.parse(localStorage.getItem("lim")) : "Set Lim"} onChange={setMaxSumToToLocalStorage} />
                                 &euro;
                             </div>
                         </div>
