@@ -33,7 +33,7 @@ export function Header() {
         <div className="nav-topings-Name">
           <Link className="nav-recipe" to="/"><h3>Recipe</h3></Link>
           <Link className="nav-my-basket" to={"/recipes-basket"}>
-              <div>{ !price ? "" : Number(price).toFixed(2) + "&euro;"}  {!price ?  <FontAwesomeIcon icon={faBasketShopping}/> : price < lim ? <FontAwesomeIcon icon={faBasketShopping} color={"green"}/> : <FontAwesomeIcon icon={faBasketShopping} color={"red"}/>}</div>
+              <div>{!price ?  <FontAwesomeIcon icon={faBasketShopping}/> : price < lim ? <FontAwesomeIcon icon={faBasketShopping} color={"green"}/> : <FontAwesomeIcon icon={faBasketShopping} color={"red"}/>}{ !price ? 0.0 : Number(price).toFixed(2) } &euro; </div>
           </Link>
         </div>
       </div>
