@@ -108,11 +108,11 @@ header{
 .RecipeListPage-filters-allergen button{
   margin-left: 1rem;
   color: black;
-  background-color: rgb(167, 40, 40);
+  background-color: rgb(40, 167, 69);
 }
 
 .RecipeListPage-filters-allergen button:hover{
-  background-color: rgb(94, 21, 21);
+  background-color: rgb(18, 84, 33);
 }
 
 

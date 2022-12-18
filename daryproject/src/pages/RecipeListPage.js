@@ -132,10 +132,12 @@ export function RecipeListPage() {
                             <datalist id="allergens">
                                 {
                                 Object.keys(Ingredients[0]).map( allergen => {
-                                    if(localStorage.getItem("allergens") === null){
-                                        return;
-                                    }
-                                    if (!JSON.parse(localStorage.getItem("allergens").includes(allergen))){
+                            
+                                    if (localStorage.getItem("allergens") !== null){
+                                        if ( !JSON.parse(localStorage.getItem("allergens").includes(allergen))){
+                                            return <option key={allergen} value={allergen}   />
+                                        }
+                                    }else{
                                         return <option key={allergen} value={allergen}   />
                                     }
                             })
