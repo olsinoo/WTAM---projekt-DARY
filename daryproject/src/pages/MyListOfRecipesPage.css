@@ -1,3 +1,37 @@
+.Basket-listOfRecipes,
+.basket-ingredients{
+    margin: auto;
+    width: 60%;
+}
+
+.BasketCard{
+    margin: 1.5rem 0;
+    border: black;
+    background-color: rgba(4, 4, 128, 0.123);
+    display: flex;
+    flex-direction: row;
+    font-size: 3rem;
+    justify-content: space-between;
+}
+
+.BasketCard:hover{
+    background-color: rgba(4, 4, 128, 0.5);
+}
+
+.BasketCard input{
+    font-size: 3rem;
+}
+
+.BasketCard Link{
+    width: 65%;
+}
+
+.Basket-information{
+    display: flex;
+    width: 35%;
+    justify-content: space-between;
+}
+
 .basket-your-shopping-list,
 .choosen-recipes{
     font-size: 5rem;
@@ -27,10 +61,7 @@
     padding: 2px 2px;
 }
 
-.basket-ingredients{
-    margin: auto;
-    width: 60%;
-}
+
 
 .basket-price{
     padding-top: 3rem;

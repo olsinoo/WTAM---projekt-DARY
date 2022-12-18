@@ -13,7 +13,7 @@ export function ListOfIngredients({ingredients}){
             <div className='RecipeDetailPage-ingredient-ingredientAmountUnit'>{ingredient?.amountUnit}
             </div>
             <div className='RecipeDetailPage-ingredient-ingredientName'>{ingredient.name} </div>
-            <div className='RecipeDetailPage-ingredient-ingredietPrice'>{Number(ingredient?.price).toFixed(2)} eur</div>
+            <div className='RecipeDetailPage-ingredient-ingredietPrice'>{Number(ingredient?.price).toFixed(2)} &euro;</div>
         </li>
         );
     }

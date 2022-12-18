@@ -9,6 +9,7 @@
         "calories": 320,
         "servingCount": 4,
         "img": "chocolate-molten-cakes.jpg",
+        "allergens": ["Milk", "Eggs", "Gluten"],
         "ingredients": [
             {
                 "_id": "f37a7518-763f-11ed-a1eb-0242ac120002",

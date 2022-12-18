@@ -1,20 +1,27 @@
 import { ListOfIngredients } from '../components/ListOfIngredients';
-import { RecipesList } from '../components/RecipesList'; 
-
+import { BasketRecipes } from '../components/BasketRecipes';
+import { useEffect, useState } from 'react';
 
 import "./MyListOfRecipesPage.css";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export function MyRecipesList(){
+    const [updatePrice, setUpdatePrice] = useState();
+
+    useEffect(() => {
+        window.addEventListener('storage', () => {
+            const theme = localStorage.getItem("price");
+            setUpdatePrice(theme);
+        })
+    }, [])
+
     const recipes =  
                 Object.keys(localStorage).map(
                     key => {
 
-                        if ((key !== "price") && (key !== "lim") && (key !== "servingCount") && (key !== "dislikedIngredients") && (key !== "likedIngredients")){
+                        if ((key !== "price") && (key !== "lim") && (key !== "servingCount") && (key !== "allergens") && (key !== "likedIngredients")){
                             return JSON.parse(localStorage.getItem(key));  
                         }
                     }).filter(item => item);
-    
     
                     
     const getIngredients = () => {
@@ -27,15 +34,10 @@ export function MyRecipesList(){
 
         return ( 
             <div className='basket-price'>
-                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + " eur" : "" }
+                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + "&euro;" : "" }
             </div> 
         );
    
-    }
-
-    const changeLimit = () =>{
-        localStorage.setItem('lim', document.getElementById('txt1').value);
-        window.dispatchEvent(new Event('storage'));
     }
 
     const ingredientsArray = getIngredients();
@@ -60,29 +62,32 @@ export function MyRecipesList(){
         return Object.keys(updatedIngredinets).map( key => updatedIngredinets[key]);
     }
 
+
     return(
         <div className='basket'>
             <div className='basket-your-limit'>
                 <form className='basket-your-limit-form'>
                     <label>Your basket limit: </label>
-                    <input type="text" id="txt1" defaultValue={localStorage.getItem('lim')} className='basket-your-limit-form-input'/>
-                    <button className='button-green' onClick={() => changeLimit()}>Change <FontAwesomeIcon/>  </button>
-                </form>
+                    <input type="number" id="txt1" defaultValue={JSON.parse(localStorage.getItem('lim')) } onChange={(e) => localStorage.setItem('lim', JSON.stringify(e.target.value))} className='basket-your-limit-form-input'/>                </form>
             </div>
-            <div className='basket-your-shopping-list'>
-                Your Shopping List:
-            </div>
-            <div className='basket-ingredients'>
-                <ListOfIngredients  ingredients={sortedIngredients()}/>
-            </div>
-            <GetPrice/>
-            <div className='choosen-recipes'>
-                Choosen recipes:
-            </div>
-            <div className='basket-recipes'>
-                <RecipesList recipes={recipes}  />
-            </div>
-            
+            <section className='basket-recipes'>
+                <div className='choosen-recipes'>
+                    Choosen recipes
+                </div>
+                <div className='basket-recipes'>
+                    <BasketRecipes recipes={recipes}  />
+                </div>
+            </section>
+
+            <section>
+                <div className='basket-your-shopping-list'>
+                    Your Shopping List
+                </div>
+                <div className='basket-ingredients'>
+                    <ListOfIngredients  ingredients={sortedIngredients()}/>
+                </div>
+                <GetPrice/>
+            </section>
         </div>
 
     )
