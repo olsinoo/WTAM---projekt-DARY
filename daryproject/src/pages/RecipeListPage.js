@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 
-import { faClock, faPeopleGroup, faRemove } from "@fortawesome/free-solid-svg-icons";
+import { faPeopleGroup, faRemove } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
 import listOfRecipes from '../database/listOfRecipes.json';
@@ -21,12 +21,7 @@ export function RecipeListPage() {
 
     useEffect(() => {
         setRecipes(listOfRecipes);
-        const arrayOfAllergens = localStorage.getItem("allergens") !== null ? JSON.parse(localStorage.getItem("allergens")) : []
-        let arrayOfIngredients = [];
-        arrayOfAllergens.forEach(allergen => {
-            Ingredients[0][allergen].forEach(ingredient => arrayOfIngredients.push(ingredient));
-        })
-        setAllergensIngredients(arrayOfIngredients);
+        setIngredientsByAllergens() ;
         window.addEventListener('storage', () => {
             const theme = localStorage.getItem("allergens");
             setallergens(theme);
@@ -80,11 +75,20 @@ export function RecipeListPage() {
         }
     }
 
-    
+    const setIngredientsByAllergens = () => {
+        const arrayOfAllergens = localStorage.getItem("allergens") !== null ? JSON.parse(localStorage.getItem("allergens")) : []
+        let arrayOfIngredients = [];
+        arrayOfAllergens.forEach(allergen => {
+            Ingredients[0][allergen].forEach(ingredient => arrayOfIngredients.push(ingredient));
+        });
+        setAllergensIngredients(arrayOfIngredients);
+    }
+
     const removeAllergenFromFilter = (e) => {
-        console.log(e.target.id);
+        console.log(e)
         let localAllergens = JSON.parse(localStorage.getItem("allergens"));
-        localStorage.setItem("allergens", JSON.stringify(localAllergens.filter(item => item !== e.target.id)));
+        localStorage.setItem("allergens", JSON.stringify(localAllergens.filter(item => item !== e.target.value)));
+        setIngredientsByAllergens();
         window.dispatchEvent(new Event('storage'));
     }
     
@@ -143,7 +147,7 @@ export function RecipeListPage() {
                                     return (
                                         <div className='RecipeListPage-filters-allergen' key={allergen}>
                                             {allergen}
-                                            <button id={allergen} onClick={removeAllergenFromFilter}><FontAwesomeIcon icon={faRemove} /></button>
+                                            <button value={allergen} id={allergen} onClick={removeAllergenFromFilter}>Х</button>
                                         </div>
                                     );
                                 }) 
@@ -155,7 +159,12 @@ export function RecipeListPage() {
                             <datalist id="allergens">
                                 {
                                 Object.keys(Ingredients[0]).map( allergen => {
-                                    return <option key={allergen} value={allergen}   />
+                                    if(localStorage.getItem("allergens") === null){
+                                        return;
+                                    }
+                                    if (!JSON.parse(localStorage.getItem("allergens").includes(allergen))){
+                                        return <option key={allergen} value={allergen}   />
+                                    }
                             })
                             }
                             </datalist>

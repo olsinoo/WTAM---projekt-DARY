@@ -79,6 +79,7 @@ header{
 .RecipeListPage-filters-allergens{
   display: flex;
   margin: 5rem auto;
+  max-width: 100%;
 }
 
 .RecipeListPage-filters-allergens-choosenAllergens{
