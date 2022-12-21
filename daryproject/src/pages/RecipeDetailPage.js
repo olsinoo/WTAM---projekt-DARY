@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { faClock, faPenToSquare, faTrashAlt, faShoppingBasket, 	faFire, faMoneyBill, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faPenToSquare, faTrashAlt, faShoppingBasket, 	faFire, faAllergies, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactMarkdown from "react-markdown";
 import { ShowIngredients } from '../components/RecipeDetailShowIngredients';
@@ -66,17 +66,28 @@ export function RecipeDetailPage() {
     }
 
     const addToBasket = () =>{
-        if(localStorage.getItem(recipe.title) == null){
-            showAlert();
-            localStorage.setItem(recipe.title, JSON.stringify(recipe))
-            if (localStorage.getItem('price') === null){
-                localStorage.setItem('price', JSON.stringify(recipe.price));
-            } else {
-                localStorage.setItem('price', JSON.stringify(recipe.price + parseFloat(localStorage.getItem('price'))));
-            }
+
+        
+        if (localStorage.getItem('price') === null){
+            localStorage.setItem('price', JSON.stringify(recipe.price));
+        } 
+
+        if(localStorage.getItem(recipe.title) === null){
+            localStorage.setItem('price', JSON.stringify(recipe.price + parseFloat(localStorage.getItem('price'))));
         }
+        else{
+            const oldRecipe = JSON.parse(localStorage.getItem(recipe.title));
+            const oldPrice = oldRecipe.price;
+            localStorage.setItem('price', JSON.stringify(recipe.price + parseFloat(localStorage.getItem('price') - oldPrice)));
+        }
+        localStorage.setItem(recipe.title, JSON.stringify(recipe));
+       
 
         window.dispatchEvent(new Event('storage'));
+    }
+
+    const GetAllergens = () => {
+        return recipe?.allergens?.join('  ');
     }
 
     return(
@@ -106,8 +117,9 @@ export function RecipeDetailPage() {
                         <FontAwesomeIcon icon={faFire} /> {Number(recipe.calories).toFixed(0)} kcal
                     </h5>
                     <h5>
-                        <FontAwesomeIcon icon={faMoneyBill} /> {Number(recipe.price).toFixed(2)} &euro;
+                        <FontAwesomeIcon icon={faAllergies} /> <GetAllergens />
                     </h5>
+                    
             </div>
             <div className='RecipeDetailPage-body'>
                 <div className='RecipeDetailPage-left'>

@@ -26,13 +26,20 @@
 
 .RecipeDetailPage-body{
   display: flex;
+  flex-direction: column;
 }
 
 .RecipeDetailPage-left{
   display: flex;
-  flex-direction: column;
   margin-top: 2.5rem;
+  justify-content: space-between;
 }
+
+.RecipeDetailPage-Ingredients-and-Directions{
+  width: 57%;
+  
+}
+
 
 .RecipeDetailPage-recipeImage{
   width: 50rem;
@@ -82,6 +89,10 @@
   padding: 0 1rem;
 }
 
+.RecipeDetailPage-Ingredient-ServingCount-Section h3{
+  margin-left: 3rem;
+}
+
 
 .RecipeDetailPage-Ingredients-box{
   width: 100%;
@@ -91,7 +102,6 @@
 .RecipeDetailPage-ingredient{
   border-top: 0.1rem solid rgba(1, 1, 41, 0.1) ;
   display: flex;
-  flex-direction: row;
   font-size: 2rem;
 }
 
@@ -102,13 +112,20 @@
 }
 
 
+
+.RecipeDetailPage-ingredient-ingredientAmountUnit{
+  display: flex;
+  justify-content: left;
+}
+
 .RecipeDetailPage-ingredient-ingredientName{
   width: 40%;
 }
 
 
-.RecipeDetailPage-Directions{
-  padding-left: 2rem;
+.RecipeDetailPage-ingredient-ingredietPrice{
+  display: flex;
+  justify-content: right;
 }
 
 
@@ -168,6 +185,9 @@
   font-size: 1.8rem;
 }
 
+.RecipeDetailPage-Directions{
+  margin-top: 3rem;
+}
 
 /* chybove hlaski */
 .RecipeDetailPage-Directions-noMethod,
@@ -177,9 +197,7 @@
   font-size: 3rem;
 }
 
-.RecipeDetailPage-Directions{
-  margin-top: 2rem;
-}
+
 
 .RecipeDetailPage-section-buttonBack{
   margin-top: 1.5rem;
