@@ -7,13 +7,13 @@ export function ListOfIngredients({ingredients}){
     const ShowIngredient = ({ingredient}) => {
         return (
         <li className='RecipeDetailPage-ingredient'>
-            <div className='RecipeDetailPage-ingredient-ingredientAmount'>
+            <p className='RecipeDetailPage-ingredient-ingredientAmount'>
             {Number(ingredient?.amount).toFixed(2)}
-            </div >
-            <div className='RecipeDetailPage-ingredient-ingredientAmountUnit'>{ingredient?.amountUnit}
-            </div>
-            <div className='RecipeDetailPage-ingredient-ingredientName'>{ingredient.name} </div>
-            <div className='RecipeDetailPage-ingredient-ingredietPrice'>{Number(ingredient?.price).toFixed(2)} &euro;</div>
+            </p >
+            <p className='RecipeDetailPage-ingredient-ingredientAmountUnit'>{ingredient?.amountUnit}
+            </p>
+            <p className='RecipeDetailPage-ingredient-ingredientName'>{ingredient.name} </p>
+            <p className='RecipeDetailPage-ingredient-ingredietPrice'>{Number(ingredient?.price).toFixed(2)} &euro;</p>
         </li>
         );
     }

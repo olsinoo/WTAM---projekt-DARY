@@ -1,4 +1,8 @@
 import { ListOfIngredients } from "./ListOfIngredients"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoneyBill } from "@fortawesome/free-solid-svg-icons";
+
+
 export function ShowIngredients ({recipe, setRecipe}){
 
 
@@ -28,10 +32,12 @@ export function ShowIngredients ({recipe, setRecipe}){
             <div className='RecipeDetailPage-Ingredients'>
                 <div className="RecipeDetailPage-Ingredient-ServingCount-Section">
                     <div className="RecipeDetailPage-Ingredient-ServingCount-Count">
-                        <span hidden={recipe.ingredients?.length === 0}>Change Serving Count</span>
+                        <span hidden={recipe.ingredients?.length === 0}>Serving Count</span>
                         <input  className='RecipeDetailPage-Ingredient-ServingCount-Section-input' type="number" min="1" max="99" value={recipe.servingCount} onChange={updateServingCount} ></input>
                     </div>
-                    <div className="RecipeDetailPage-Ingredients-priceOfAllIngredients">   {Number(recipe.price).toFixed(2)} &euro;</div>
+                    <h3>
+                        <FontAwesomeIcon icon={faMoneyBill} /> {Number(recipe.price).toFixed(2)} &euro;
+                    </h3>
                 </div>   
                
                 <ListOfIngredients ingredients={recipe.ingredients} /> 
