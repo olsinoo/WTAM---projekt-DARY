@@ -9,6 +9,7 @@
         "calories": 662,
         "servingCount": 4,
         "img": "winter-greens-puff-pie.jpg",
+        "allergens": ["Eggs", "Milk"],
         "ingredients": [
             {
                 "_id": "MM129PCW7UYBHAWSTSVLGL6O",

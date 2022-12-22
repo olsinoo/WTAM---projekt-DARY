@@ -9,6 +9,7 @@
         "calories": 225,
         "servingCount": 4,
         "img": "pancakes.jpg",
+        "allergens": ["Milk", "Gluten", "Eggs"],
         "ingredients": [
             {
                 "_id": "3f657bbc-7640-11ed-a1eb-0242ac120002",

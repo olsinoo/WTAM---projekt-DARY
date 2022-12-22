@@ -9,6 +9,7 @@
         "calories": 315,
         "servingCount": 4,
         "img": "honey-hazelnut-baked-brie.jpg",
+        "allergens": ["Milk", "Nuts"],
         "ingredients": [
             {
                 "_id": "S4UXFX51DBR6NIFNZ9OFM2ZJ",

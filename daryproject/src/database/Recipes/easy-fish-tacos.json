@@ -1,0 +1,60 @@
+[
+    {
+        "_id": "YLESLFO7KJABTZ8R5T7KSKIE",
+        "title": "Easy Fish Tacos",
+        "preparationTime": 21,
+        "directions": "1. To make the sauce, put all of its ingredients in a food processor, blitz until smooth and season well. Add a splash of water if you need to, to make it a consistency that can be drizzled, then pour into a bowl or jug and chill until needed.\n\n2. To make the fish, whisk the lime juice, oil and fajita seasoning in a bowl, add the cod and toss well. Fry the cod in a non-stick frying pan over a high heat for 5 mins until beginning to flake, but not falling apart. Divide between the tortillas, each one drizzled with the sauce and topped with a spoonful of our curtido and our tomatillo salsa..\n\n",
+        "slug": "easy-fish-tacos",
+        "price": 3.35,
+        "calories": 185,
+        "servingCount": 4,
+        "img": "easy-fish-tacos.jpg",
+        "allergens": ["Milk", "Gluten","Fish", "Eggs"],
+        "ingredients": [
+            {
+                "_id": "RP4T052SMP129PCW7UYBHAWS",
+                "amountUnit": "",
+                "amount": 8,
+                "name": "tortilla",
+                "price": 0.6
+            },
+            {
+                "_id": "TSVLGL6OEPSUO5QBPSP3WQ07",
+                "name": "olive oil",
+                "amount": 1,
+                "amountUnit": "spn",
+                "price": 0.15
+            },
+            {
+                "_id": "VVMCVBSTGSJMDVUP20GVCGDL",
+                "name": "fish fillet",
+                "amount": 400,
+                "amountUnit": "g",
+                "price": 1.5
+            },
+            {
+                "_id": "OYDEKRN8JWANJCX4436WRDHQ",
+                "name": "mayonnaise",
+                "amount": 50,
+                "amountUnit": "g",
+                "price": 0.35
+            },
+            {
+                "_id": "OYDEKRN8JWANJCX4436WRDHQ",
+                "name": "fajita seasoning",
+                "amount": 20,
+                "amountUnit": "g",
+                "price": 0.35
+            },
+            {
+                "_id": "OYDEKRN8JWANJCX4436WRDHQ",
+                "name": "yogurt",
+                "amount": 50,
+                "amountUnit": "g",
+                "price": 0.40
+            }
+        ],
+        "lastModifiedDate": "2022-11-12T14:37:13.403Z",
+        "__v": 0
+    }
+]

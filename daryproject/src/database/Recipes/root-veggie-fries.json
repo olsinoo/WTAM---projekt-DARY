@@ -9,6 +9,7 @@
         "calories": 315,
         "servingCount": 4,
         "img": "root-veggie-fries-ck.jpg",
+        "allergens": [],
         "ingredients": [
             {
                 "_id": "5b4f00f4f275000019d0c3bd",

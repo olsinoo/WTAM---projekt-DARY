@@ -9,6 +9,7 @@
         "calories": 329,
         "servingCount": 4,
         "img": "spanish-chicken-stew.jpg",
+        "allergens": ["Nuts"],
         "ingredients": [
             {
                 "_id": "VVMCVBJTGTJM4VUP20GVCGDL",
@@ -61,7 +62,7 @@
             },
             {
                 "_id": "HGK9EJUDCOHJDUEZYLESLFOV",
-                "name": "flaked almonds, toasted",
+                "name": "flaked almonds",
                 "amountUnit": "g",
                 "amount": 50,
                 "price": 0.35

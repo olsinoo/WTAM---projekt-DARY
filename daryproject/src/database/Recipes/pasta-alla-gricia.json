@@ -9,6 +9,7 @@
         "calories": 315,
         "servingCount": 4,
         "img": "pasta-alla-gricia.jpg",
+        "allergens": ["Milk", "Gluten"],
         "ingredients": [
             {
                 "_id": "RP4T052AMM129PCW7UYBHAWS",
@@ -33,7 +34,7 @@
             },
             {
                 "_id": "OYDEKRN8JWANJCX4436WRWHQ",
-                "name": "Grated cheese",
+                "name": "cheese",
                 "amount": 50,
                 "amountUnit": "g",
                 "price": 0.35

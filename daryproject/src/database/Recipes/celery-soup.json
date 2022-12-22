@@ -9,6 +9,7 @@
         "calories": 163,
         "servingCount": 4,
         "img": "celery-soup.jpg",
+        "allergens": ["Celery", "Milk"],
         "ingredients": [
             {
                 "_id": "0XP3WQ07VVMCVBJTGSJM4VUP",

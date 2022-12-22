@@ -9,6 +9,7 @@
         "calories": 460,
         "servingCount": 4,
         "img": "rocky-road.jpg",
+        "allergens": ["Milk","Eggs","Gluten"],
         "ingredients": [
             {
                 "_id": "e3a91ecc-7640-11ed-a1eb-0242ac120002",
