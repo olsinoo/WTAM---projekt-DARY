@@ -5,6 +5,9 @@ nav{
   align-items: center;
 }
 
+.Nav-Toast{
+  font-size: 2.5rem;
+}
 
 .nav-topings-Name{
   display: flex;

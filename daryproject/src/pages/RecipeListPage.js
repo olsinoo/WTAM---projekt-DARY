@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-
-
 import { faPeopleGroup, faRemove } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
@@ -8,6 +6,8 @@ import listOfRecipes from '../database/listOfRecipes.json';
 import Ingredients from '../database/Ingredients.json';
 import { SearchInput } from '../components/SearchInput';
 import { RecipesList } from '../components/RecipesList';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './RecipeListPage.css';
 
@@ -37,6 +37,21 @@ export function RecipeListPage() {
     ).filter(recipe => (localStorage.getItem("allergens") !== null ? allergensIngredients : [])
             .every(ingredient => recipe.ingredients.indexOf(ingredient) === -1))
 
+    const showAlert = (allergen, text) =>{
+        console.log(allergen);
+        toast.info(text + allergen, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
+    }
+
+
     const updateServingCount = (e) => {
         if (e.target.value === ""){
             return
@@ -64,6 +79,7 @@ export function RecipeListPage() {
     const updateallergens = (e) => {
         const ingFormLocalStorage = localStorage.getItem("allergens") !== null ? localStorage.getItem("allergens") : "";
         if (Object.keys(Ingredients[0]).includes(e.target.value) && !ingFormLocalStorage.includes(e.target.value)){
+            showAlert(e.target.value, "Filter Recipes without Allergen:");
             let allergenstest = localStorage.getItem("allergens") !== null ? JSON.parse(localStorage.getItem("allergens")): [];
             allergenstest.push(e.target.value);
             localStorage.setItem("allergens", JSON.stringify(allergenstest));
@@ -85,7 +101,7 @@ export function RecipeListPage() {
     }
 
     const removeAllergenFromFilter = (e) => {
-        console.log(e)
+        showAlert(e.target.value, "Return to records Allergen:");
         let localAllergens = JSON.parse(localStorage.getItem("allergens"));
         localStorage.setItem("allergens", JSON.stringify(localAllergens.filter(item => item !== e.target.value)));
         setIngredientsByAllergens();
@@ -93,6 +109,7 @@ export function RecipeListPage() {
     }
     
     const resetFilters = () => {
+        showAlert("", "Filters was reset to default");
         localStorage.removeItem("allergens");
         setSearchValue("");
         window.dispatchEvent(new Event('storage'));
@@ -111,6 +128,7 @@ export function RecipeListPage() {
     //     window.dispatchEvent(new Event('storage'));
     // }
 
+    
     
     
     return(
@@ -153,6 +171,7 @@ export function RecipeListPage() {
                                         <div className='RecipeListPage-filters-allergen' key={allergen}>
                                             {allergen}
                                             <button value={allergen} id={allergen} onClick={removeAllergenFromFilter}>Х</button>
+                                            
                                         </div>
                                     );
                                 }) 
@@ -177,7 +196,7 @@ export function RecipeListPage() {
                         <div className="RecipeListPage-options-maxSum">
                             <label >Budget Limit for <FontAwesomeIcon icon={faBasketShopping} /></label>
                             <div className='RecipeListPage-options-maxSum-input'>
-                                <input id="maxSum" type="number" min="0" max="99" step="0.1" value={localStorage.getItem("lim") !== null ? JSON.parse(localStorage.getItem("lim")) : "Set Lim"} onChange={setMaxSumToToLocalStorage} />
+                                <input id="maxSum" type="number" min="0" max="99" step="0.1" placeholder='Set num' value={localStorage.getItem("lim") !== null ? JSON.parse(localStorage.getItem("lim")) : "Set Lim"} onChange={setMaxSumToToLocalStorage} />
                                 &euro;
                             </div>
                         </div>
