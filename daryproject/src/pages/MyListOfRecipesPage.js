@@ -76,7 +76,7 @@ export function MyRecipesList(){
             <div className='basket-your-limit'>
                 <form className='basket-your-limit-form'>
                     <label>Your basket limit: </label>
-                    <input type="number" id="txt1" value={JSON.parse(localStorage.getItem('lim')) } onChange={(e) => localStorage.setItem('lim', JSON.stringify(e.target.value))} className='basket-your-limit-form-input'/>                </form>
+                    <input type="number" id="txt1" defaultValue={JSON.parse(localStorage.getItem('lim')) } onChange={(e) => localStorage.setItem('lim', JSON.stringify(e.target.valueAsNumber))} className='basket-your-limit-form-input'/>                </form>
             </div>
             <section className='basket-recipes'>
                 <div className='choosen-recipes'>
