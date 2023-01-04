@@ -14,6 +14,8 @@ export function MyRecipesList(){
             setUpdatePrice(theme);
            
         })
+
+        document.title = "My Recipes"
        
     }, [])
 

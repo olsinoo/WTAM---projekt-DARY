@@ -30,6 +30,7 @@ export function RecipeListPage() {
             const theme4 = localStorage.getItem("servingCount");
             setServCount(theme4);
           })
+        document.title = "Recipes Overview"
     }, [])
 
     const filterredRecipes = recipes.filter(recipe => 
