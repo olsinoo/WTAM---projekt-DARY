@@ -32,6 +32,7 @@ export function RecipeDetailPage() {
                                      amount: ingredient.amount / newRecipe.servingCount * servingCountLS,
                                      price: ingredient.price / newRecipe.servingCount * servingCountLS}
                                 })});
+        document.title = "Recipe Details"
     },[slug]);
 
     
@@ -132,7 +133,7 @@ export function RecipeDetailPage() {
     }
 
     const GetAllergens = () => {
-        return recipe?.allergens?.join('  ');
+        return recipe?.allergens?.join(', ');
     }
 
     return(

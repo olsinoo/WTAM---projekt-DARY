@@ -30,6 +30,7 @@ export function RecipeListPage() {
             const theme4 = localStorage.getItem("servingCount");
             setServCount(theme4);
           })
+        document.title = "Recipes Overview"
     }, [])
 
     const filterredRecipes = recipes.filter(recipe => 
@@ -79,7 +80,7 @@ export function RecipeListPage() {
     const updateallergens = (e) => {
         const ingFormLocalStorage = localStorage.getItem("allergens") !== null ? localStorage.getItem("allergens") : "";
         if (Object.keys(Ingredients[0]).includes(e.target.value) && !ingFormLocalStorage.includes(e.target.value)){
-            showAlert(e.target.value, "Filter Recipes without Allergen:");
+            showAlert(e.target.value, "Filter Recipes without Allergen: ");
             let allergenstest = localStorage.getItem("allergens") !== null ? JSON.parse(localStorage.getItem("allergens")): [];
             allergenstest.push(e.target.value);
             localStorage.setItem("allergens", JSON.stringify(allergenstest));
@@ -109,7 +110,7 @@ export function RecipeListPage() {
     }
     
     const resetFilters = () => {
-        showAlert("", "Filters was reset to default");
+        showAlert("", "Filters have been set to default");
         localStorage.removeItem("allergens");
         setSearchValue("");
         window.dispatchEvent(new Event('storage'));
