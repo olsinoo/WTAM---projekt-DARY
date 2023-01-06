@@ -12,6 +12,18 @@
         "ingredients": ["flour", "egg", "milk", "sunflower oil", "lemon", "sugar", "beef mince"]
     },
     {
+        "_id": "53056fd4-763f-11ed-a1eb-0242ac121002",
+        "title": "Easy Fish Tacos",
+        "preparationTime":21,
+        "slug": "easy-fish-tacos",
+        "lastModifiedDate": "2017-02-14T19:25:38.083Z",
+        "price": 3.35,
+        "calories": 185,
+        "countOfServing": 4,
+        "img": "easy-fish-tacos.jpg",
+        "ingredients": ["tortilla", "fish fillet", "mayonnaise", "fajita seasoning", "yogurt", "olive oil"]
+    },
+    {
         "_id": "5bf6cbef6ac34b001baef483",
         "title": "Root Veggie Fries",
         "preparationTime": 50,
@@ -156,7 +168,6 @@
         "img": "pancakes.jpg",
         "ingredients": ["flour", "egg", "milk", "sunflower oil", "lemon", "sugar", "beef mince"]
     },
-
     {
         "_id": "53056fd4-763f-11ed-a1eb-0242ac120002",
         "title": "Italian bean salad",

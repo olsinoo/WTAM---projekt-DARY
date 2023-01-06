@@ -9,6 +9,7 @@
         "calories": 589,
         "servingCount": 4,
         "img": "sausage-ragu.jpg",
+        "allergens": ["Gluten"],
         "ingredients": [
             {
                 "_id": "COHJDUEZYLESLFOVKJABTZ8R",
@@ -61,7 +62,7 @@
             },
             {
                 "_id": "TR7V374COP35BREZAW0EJCYV",
-                "name": "rigatoni pasta",
+                "name": "pasta",
                 "amountUnit": "g",
                 "amount": 350,
                 "price": 0.8

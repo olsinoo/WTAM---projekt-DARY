@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <div>
       <hr />
-      <p>DARY team</p>
+      <center><p>&copy; 2023 DARY-team</p></center>
     </div>
   );
 }

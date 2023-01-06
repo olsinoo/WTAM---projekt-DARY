@@ -2,17 +2,24 @@ import { ListOfIngredients } from '../components/ListOfIngredients';
 import { BasketRecipes } from '../components/BasketRecipes';
 import { useEffect, useState } from 'react';
 
+
 import "./MyListOfRecipesPage.css";
 
 export function MyRecipesList(){
     const [updatePrice, setUpdatePrice] = useState();
-
+ 
     useEffect(() => {
         window.addEventListener('storage', () => {
             const theme = localStorage.getItem("price");
             setUpdatePrice(theme);
+           
         })
+
+        document.title = "My Recipes"
+       
     }, [])
+
+   
 
     const recipes =  
                 Object.keys(localStorage).map(
@@ -22,8 +29,10 @@ export function MyRecipesList(){
                             return JSON.parse(localStorage.getItem(key));  
                         }
                     }).filter(item => item);
-    
-                    
+
+
+
+
     const getIngredients = () => {
         return recipes.map(recipe =>
             recipe?.ingredients);
@@ -34,7 +43,7 @@ export function MyRecipesList(){
 
         return ( 
             <div className='basket-price'>
-                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + "&euro;" : "" }
+                {arrayOfPrice.length !== 0 ? "/" + Number(arrayOfPrice.reduce((result, price) => result = result + price)).toFixed(2) + " €" : "" }
             </div> 
         );
    
@@ -65,14 +74,15 @@ export function MyRecipesList(){
 
     return(
         <div className='basket'>
+            
             <div className='basket-your-limit'>
                 <form className='basket-your-limit-form'>
-                    <label>Your basket limit: </label>
-                    <input type="number" id="txt1" defaultValue={JSON.parse(localStorage.getItem('lim')) } onChange={(e) => localStorage.setItem('lim', JSON.stringify(e.target.value))} className='basket-your-limit-form-input'/>                </form>
+                    <label>Your budget limit: </label>
+                    <input type="number" id="txt1" defaultValue={JSON.parse(localStorage.getItem('lim')) } onChange={(e) => localStorage.setItem('lim', JSON.stringify(e.target.valueAsNumber))} className='basket-your-limit-form-input'/>                </form>
             </div>
             <section className='basket-recipes'>
                 <div className='choosen-recipes'>
-                    Choosen recipes
+                    Selected recipes
                 </div>
                 <div className='basket-recipes'>
                     <BasketRecipes recipes={recipes}  />

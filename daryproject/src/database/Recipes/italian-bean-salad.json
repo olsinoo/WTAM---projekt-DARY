@@ -9,6 +9,7 @@
         "calories": 150,
         "servingCount": 4,
         "img": "italian-bean-salad.jpg",
+        "allergens": [],
         "ingredients": [
             {
                 "_id": "75c2c958-7640-11ed-a1eb-0242ac120002",

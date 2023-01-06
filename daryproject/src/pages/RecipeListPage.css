@@ -1,7 +1,7 @@
 .RecipeListPage-header{
   display: flex;
   justify-content: space-between;
- 
+  padding: 2rem 0;
 }
 
 .RecipeListPage-header h3{
@@ -14,11 +14,8 @@ header{
 }
 
 .RecipeListPage-options{
-  margin: 3rem 0;
   background-color:rgba(4, 4, 128, 0.123);
-  padding-top: 2rem;
   width: 20%;
-  
 }
 
 
@@ -51,7 +48,6 @@ header{
 
 
 .RecipeListPage-filters{
-  margin: 2rem 0;
   background-color:rgba(1, 1, 41, 0.9);
   color:white;
   padding: 3rem 0;
@@ -75,7 +71,6 @@ header{
   border: 0.3rem solid rgb(10, 10, 197);
 }
 
-
 .RecipeListPage-underHeader-searchButton input,
 .RecipeListPage-filters-allergens{
   width: 95%;
@@ -89,10 +84,10 @@ header{
 }
 
 .RecipeListPage-filters-allergens-choosenAllergens{
-  
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 1rem;
+  width: 100%;
 }
 
 .RecipeListPage-filters-allergen{
@@ -116,19 +111,13 @@ header{
 }
 
 
-.RecipeListPage-filters{
-  margin-top: 3rem;
-  font-size: 3rem;
-}
-
-
 .RecipeListPage-filters input{
   font-size: 3rem;
 
 }
 
 .RecipeListPage-filters-allergens-input input{
-  margin: 0;
+  margin-left: 10px;
 }
 
 .RecipeListPage-ResetFilter{

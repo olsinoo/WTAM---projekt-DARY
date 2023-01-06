@@ -9,6 +9,7 @@
         "calories": 474,
         "servingCount": 4,
         "img": "microwave-banana-pudding.jpg",
+        "allergens": ["Milk", "Gluten", "Eggs"],
         "ingredients": [
             {
                 "_id": "XXOFXDMWJVLO6YWS42IXEIGO",
@@ -33,7 +34,7 @@
             },
             {
                 "_id": "U6WZHZ73GET8QKHP1BQIO51L",
-                "name": "self-raising flour",
+                "name": "flour",
                 "amount": 100,
                 "amountUnit": "g",
                 "price": 0.3

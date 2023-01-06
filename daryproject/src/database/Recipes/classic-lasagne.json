@@ -9,6 +9,7 @@
         "calories": 400,
         "servingCount": 4,
         "img": "classic-lasagne.jpg",
+        "allergens": ["Celery", "Gluten"],
         "ingredients": [
             {
                 "_id": "61f56caa-7640-11ed-a1eb-0242ac120002",
