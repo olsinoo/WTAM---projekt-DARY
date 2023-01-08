@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import { faPeopleGroup, faRemove } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBasketShopping} from "@fortawesome/free-solid-svg-icons";
+import {useEffect, useState} from 'react';
+import {faBasketShopping, faPeopleGroup} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import listOfRecipes from '../database/listOfRecipes.json';
 import Ingredients from '../database/Ingredients.json';
-import { SearchInput } from '../components/SearchInput';
-import { RecipesList } from '../components/RecipesList';
-import { ToastContainer, toast } from 'react-toastify';
+import {SearchInput} from '../components/SearchInput';
+import {RecipesList} from '../components/RecipesList';
+import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import './RecipeListPage.css';
@@ -128,9 +127,6 @@ export function RecipeListPage() {
     //     document.getElementById('maxSum').value = "";
     //     window.dispatchEvent(new Event('storage'));
     // }
-
-    
-    
     
     return(
         <div className="RecipeListPage-section">
@@ -147,7 +143,7 @@ export function RecipeListPage() {
                         <label>Allergens </label>
                        
                         <div className='RecipeListPage-filters-allergens-input '>
-                            <input onfocus="this.value=''" list="allergens" placeholder="Write here allergen" onChange={updateallergens}/>
+                            <input onfocus="this.value=''" list="allergens" placeholder="Write allergens here" onChange={updateallergens}/>
                             <datalist id="allergens">
                                 {
                                 Object.keys(Ingredients[0]).map( allergen => {
@@ -165,7 +161,7 @@ export function RecipeListPage() {
                         </div>
                       
                     </div>
-                    <div className='RecipeListPage-filters-allergens-choosenAllergens'>
+                    <div className='RecipeListPage-filters-allergens-chosenAllergens'>
                             {
                                 JSON.parse(localStorage.getItem("allergens"))?.map(allergen => {
                                     return (
@@ -187,17 +183,16 @@ export function RecipeListPage() {
                     <h3>Options</h3>
                     <div className='RecipeListPage-options-body'>
                         <div className="RecipeListPage-options-servingCount">
-                            <label >Serving Count </label>
+                            <label >Serving Count</label>
                             <div className='RecipeListPage-options-servingCount-input'>
-                                
-                                <input type="number" min="1" max="99"  value={localStorage.getItem("servingCount")  !== null ? JSON.parse(localStorage.getItem("servingCount")) : recipes[0]?.countOfServing} onChange={updateServingCount} />
+                                <input type="number" min="1" max="99" className='RecipeListPage-options-input' value={localStorage.getItem("servingCount")  !== null ? JSON.parse(localStorage.getItem("servingCount")) : recipes[0]?.countOfServing} onChange={updateServingCount} />
                                 <FontAwesomeIcon icon={faPeopleGroup} />
                             </div>
                         </div>
                         <div className="RecipeListPage-options-maxSum">
-                            <label >Budget Limit for <FontAwesomeIcon icon={faBasketShopping} /></label>
+                            <label >Your budget <FontAwesomeIcon icon={faBasketShopping} /></label>
                             <div className='RecipeListPage-options-maxSum-input'>
-                                <input id="maxSum" type="number" min="0" max="99" step="0.1" placeholder='Set num' value={localStorage.getItem("lim") !== null ? JSON.parse(localStorage.getItem("lim")) : "Set Lim"} onChange={setMaxSumToToLocalStorage} />
+                                <input id="maxSum" type="number" min="0" max="100" step="0.1" placeholder='Set num' className='RecipeListPage-options-input' value={localStorage.getItem("lim") !== null ? JSON.parse(localStorage.getItem("lim")) : "Set Lim"} onChange={setMaxSumToToLocalStorage} />
                                 &euro;
                             </div>
                         </div>
@@ -211,7 +206,7 @@ export function RecipeListPage() {
                 
             </div>
             <div className="RecipeListPage-Reipe-records">
-                    <h2>Available Recipes: {filterredRecipes.length} </h2>
+                    <h2>Amount of recipes: {filterredRecipes.length} </h2>
             </div>
             <RecipesList recipes={filterredRecipes} />
         </div>

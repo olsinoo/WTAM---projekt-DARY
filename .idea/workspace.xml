@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463a867e-526b-40d0-b257-ee8347055b6f" name="Changes" comment="" />
+    <list default="true" id="463a867e-526b-40d0-b257-ee8347055b6f" name="Changes" comment="Deleting random junk">
+      <change afterPath="$PROJECT_DIR$/daryproject/src/components/Footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_12_2022_05_03_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_12_2022_05_03_pm__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/components/BasketCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/BasketCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/components/BasketRecipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/BasketRecipes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/components/ListOfIngredients.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/ListOfIngredients.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/components/RecipesList.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/RecipesList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/components/SearchInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/SearchInput.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/celery-soup.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/celery-soup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/microwave-banana-pudding.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/microwave-banana-pudding.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/sausage-ragu.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/sausage-ragu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/spanish-chicken-stew.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/spanish-chicken-stew.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/winter-greens-puff-pie.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/winter-greens-puff-pie.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeDetailPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeDetailPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeDetailPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +31,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <favorite-branches>
@@ -39,18 +68,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adamo/PhpstormProjects/WTAM-projekt_DARY/daryproject/src/database/Recipes&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/adamo/PhpstormProjects/WTAM-projekt_DARY/daryproject/src/database/Recipes",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "ts.external.directory.path": "C:\\Users\\adamo\\AppData\\Local\\JetBrains\\Toolbox\\apps\\PhpStorm\\ch-0\\222.4345.15\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adamo\PhpstormProjects\WTAM-projekt_DARY\daryproject\src\database\Recipes" />
@@ -67,7 +98,25 @@
       <workItem from="1668623539957" duration="1293000" />
       <workItem from="1669223626652" duration="1934000" />
       <workItem from="1670429025403" duration="164000" />
+      <workItem from="1670429200332" duration="2289000" />
+      <workItem from="1670500451014" duration="169000" />
+      <workItem from="1670758950589" duration="2877000" />
+      <workItem from="1670781620061" duration="2129000" />
+      <workItem from="1670923117026" duration="626000" />
+      <workItem from="1671401283174" duration="666000" />
+      <workItem from="1671707917888" duration="594000" />
+      <workItem from="1673022370762" duration="6536000" />
+      <workItem from="1673096900783" duration="27197000" />
+      <workItem from="1673181756623" duration="7018000" />
     </task>
+    <task id="LOCAL-00001" summary="Deleting random junk">
+      <created>1670429268399</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670429268399</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -83,6 +132,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Deleting random junk" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleting random junk" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

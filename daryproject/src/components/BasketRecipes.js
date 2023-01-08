@@ -8,8 +8,7 @@ export function BasketRecipes ({recipes}){
         return recipes.map(recipe => <BasketCard key={recipe.title} recipe={recipe} />);
     }
   
-    
-    
+
     return (
         <div className="Basket-listOfRecipes">
             <ListOfRecipes />  

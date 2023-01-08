@@ -20,14 +20,14 @@
             },
             {
                 "_id": "5R7KSKIERP4T052AMM129PCW",
-                "name": "onion, chopped",
+                "name": "onion",
                 "amount": 1,
                 "amountUnit": "spn",
                 "price": 0.3
             },
             {
                 "_id": "7UYBHAWSTSVLGL6OEPSUO5QB",
-                "name": "garlic cloves, crushed",
+                "name": "garlic cloves",
                 "amount": 2,
                 "amountUnit": "",
                 "price": 0.2

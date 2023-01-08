@@ -16,6 +16,8 @@ header{
 .RecipeListPage-options{
   background-color:rgba(4, 4, 128, 0.123);
   width: 20%;
+  border-radius: 10px;
+  padding-top: 3rem;
 }
 
 
@@ -53,6 +55,7 @@ header{
   padding: 3rem 0;
   font-size: 3rem;
   width: 78%;
+  border-radius: 10px;
 }
 
 .RecipeListPage-underHeader-searchButton{
@@ -83,7 +86,7 @@ header{
   max-width: 100%;
 }
 
-.RecipeListPage-filters-allergens-choosenAllergens{
+.RecipeListPage-filters-allergens-chosenAllergens{
   display: flex;
   flex-wrap: wrap;
   margin: 0 1rem;
@@ -129,4 +132,8 @@ header{
   margin-top: 1rem;
   flex: 1 1 10rem;
   font-size: 1.7rem;
+}
+
+.RecipeListPage-options-input {
+  width: calc(100% - 3.5ch);
 }

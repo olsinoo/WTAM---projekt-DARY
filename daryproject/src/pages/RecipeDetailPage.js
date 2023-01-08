@@ -74,9 +74,9 @@ export function RecipeDetailPage() {
             setOpenPopup(true);
             return (<Popup   onClose={closeModal} trigger={ <button className='button-blue' onClick={addToBasket}>Add to <FontAwesomeIcon icon={faShoppingBasket}/>  </button>} modal>
                     <div className='RecipeDetailPage-section-popup'>
-                        <h3>You don't set the limit for your    <FontAwesomeIcon icon={faShoppingBasket} />  !!!</h3>
+                        <h3>You didn't set the budget for your <FontAwesomeIcon icon={faShoppingBasket} className='basket-icon'/></h3>
                         <div className='RecipeDerailPage-section-popup-buttons'>
-                            <label>Please set the limit  </label>
+                            <label>Please set the budget </label>
                             <input type="number" min="1" max="99" onChange={setMaxSumToToLocalStorage} property='Write number here'/>
                             <button className='button-green' onClick={closeModal}> Confirm</button>
                         </div>
@@ -117,7 +117,7 @@ export function RecipeDetailPage() {
             
         }
         if(JSON.parse(localStorage.getItem("lim")) < JSON.parse(localStorage.getItem("price")) ){
-            toast.warn('You have exceeded the budget limit', {
+            toast.warn('You exceeded your budget.', {
                 position: "top-center",
                 autoClose: 5000,
                 hideProgressBar: false,
