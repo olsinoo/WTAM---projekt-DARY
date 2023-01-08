@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463a867e-526b-40d0-b257-ee8347055b6f" name="Changes" comment="Deleting random junk">
-      <change afterPath="$PROJECT_DIR$/daryproject/src/components/Footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_12_2022_05_03_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_12_2022_05_03_pm__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/components/BasketCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/BasketCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/components/BasketRecipes.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/BasketRecipes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/components/ListOfIngredients.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/ListOfIngredients.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/components/RecipesList.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/RecipesList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/components/SearchInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/SearchInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/celery-soup.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/celery-soup.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/microwave-banana-pudding.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/microwave-banana-pudding.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/sausage-ragu.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/sausage-ragu.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/spanish-chicken-stew.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/spanish-chicken-stew.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/database/Recipes/winter-greens-puff-pie.json" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/database/Recipes/winter-greens-puff-pie.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeDetailPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeDetailPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeDetailPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeDetailPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.js" afterDir="false" />
-    </list>
+    <list default="true" id="463a867e-526b-40d0-b257-ee8347055b6f" name="Changes" comment="- changed basket design&#10;- added download button for shopping list&#10;- all corners were rounded&#10;- fixed footer&#10;- grammatical fixes&#10;- graphical fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +85,7 @@
       <workItem from="1671707917888" duration="594000" />
       <workItem from="1673022370762" duration="6536000" />
       <workItem from="1673096900783" duration="27197000" />
-      <workItem from="1673181756623" duration="7018000" />
+      <workItem from="1673181756623" duration="7352000" />
     </task>
     <task id="LOCAL-00001" summary="Deleting random junk">
       <created>1670429268399</created>
@@ -116,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670429268399</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- changed basket design&#10;- added download button for shopping list&#10;- all corners were rounded&#10;- fixed footer&#10;- grammatical fixes&#10;- graphical fixes">
+      <created>1673195217666</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673195217666</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +120,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deleting random junk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleting random junk" />
+    <MESSAGE value="- changed basket design&#10;- added download button for shopping list&#10;- all corners were rounded&#10;- fixed footer&#10;- grammatical fixes&#10;- graphical fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="- changed basket design&#10;- added download button for shopping list&#10;- all corners were rounded&#10;- fixed footer&#10;- grammatical fixes&#10;- graphical fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
