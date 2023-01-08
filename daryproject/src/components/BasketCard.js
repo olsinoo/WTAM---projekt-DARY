@@ -80,7 +80,7 @@ export function BasketCard({recipe}){
                 </div>
                 <div className='BasketCardServings'>
                     <input type="number" min="1" max="99" value={recipe.servingCount} maxLength={2} onChange={updateRecipe}/>
-                    <span className='cardLabelText'>{servingLabel(recipe.servingCount)}</span>
+                    <span className='cardServingLabelText'>{servingLabel(recipe.servingCount)}</span>
                 </div>
                 <div className='BasketCardOtherInfo'>
                     <span><b>{Number(recipe.price).toFixed(2)} &euro;</b></span>

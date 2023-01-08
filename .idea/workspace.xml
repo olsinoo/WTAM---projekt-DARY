@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463a867e-526b-40d0-b257-ee8347055b6f" name="Changes" comment="- changed basket design&#10;- added download button for shopping list&#10;- all corners were rounded&#10;- fixed footer&#10;- grammatical fixes&#10;- graphical fixes" />
+    <list default="true" id="463a867e-526b-40d0-b257-ee8347055b6f" name="Changes" comment="- netlify redirection fix (probably)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +88,7 @@
       <workItem from="1671707917888" duration="594000" />
       <workItem from="1673022370762" duration="6536000" />
       <workItem from="1673096900783" duration="27197000" />
-      <workItem from="1673181756623" duration="7352000" />
+      <workItem from="1673181756623" duration="8393000" />
     </task>
     <task id="LOCAL-00001" summary="Deleting random junk">
       <created>1670429268399</created>
@@ -101,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673195217666</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="- netlify redirection fix (probably)">
+      <created>1673195460816</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673195460816</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +131,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deleting random junk" />
     <MESSAGE value="- changed basket design&#10;- added download button for shopping list&#10;- all corners were rounded&#10;- fixed footer&#10;- grammatical fixes&#10;- graphical fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="- changed basket design&#10;- added download button for shopping list&#10;- all corners were rounded&#10;- fixed footer&#10;- grammatical fixes&#10;- graphical fixes" />
+    <MESSAGE value="- netlify redirection fix (probably)" />
+    <option name="LAST_COMMIT_MESSAGE" value="- netlify redirection fix (probably)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
