@@ -36,7 +36,7 @@ export function RecipeCard({ title, preparationTime, slug, price, calories, coun
                 </div>
                 <div className="RecipeCard-another">
                   <p>{calories} kcal</p>
-                  <p><FontAwesomeIcon icon={faPeopleGroup} /> {countOfServing}</p>
+                  <p><FontAwesomeIcon icon={faPeopleGroup}/> {countOfServing}</p>
                 </div>
             </div>
         </Link>

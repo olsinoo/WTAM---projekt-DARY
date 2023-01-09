@@ -77,14 +77,16 @@ export function RecipeListPage() {
     }
 
     const updateallergens = (e) => {
-        const ingFormLocalStorage = localStorage.getItem("allergens") !== null ? localStorage.getItem("allergens") : "";
-        if (Object.keys(Ingredients[0]).includes(e.target.value) && !ingFormLocalStorage.includes(e.target.value)){
-            showAlert(e.target.value, "Filter Recipes without Allergen: ");
+        const ingFormLocalStorage = localStorage.getItem("allergens") !== null ? localStorage.getItem("allergens").toLowerCase() : "";
+        let foundTargetIngredient = Object.keys(Ingredients[0]).find(ingre => {return ingre.toLowerCase() === e.target.value.toLowerCase()});
+        // if (Object.keys(Ingredients[0]).includes(e.target.value) && !ingFormLocalStorage.includes(e.target.value)){
+        if (foundTargetIngredient !== undefined && !ingFormLocalStorage.includes(e.target.value.toLowerCase())){
+            showAlert(foundTargetIngredient, "Filter Recipes without Allergen: ");
             let allergenstest = localStorage.getItem("allergens") !== null ? JSON.parse(localStorage.getItem("allergens")): [];
-            allergenstest.push(e.target.value);
+            allergenstest.push(foundTargetIngredient);
             localStorage.setItem("allergens", JSON.stringify(allergenstest));
             let arrayOfIngredients = allergensIngredients;
-            Ingredients[0][e.target.value].forEach(ingredient => arrayOfIngredients.push(ingredient));
+            Ingredients[0][foundTargetIngredient].forEach(ingredient => arrayOfIngredients.push(ingredient));
             setAllergensIngredients(arrayOfIngredients);
             window.dispatchEvent(new Event('storage'));
             e.target.value = "";

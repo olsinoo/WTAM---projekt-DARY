@@ -52,7 +52,7 @@ header{
 .RecipeListPage-filters{
   background-color:rgba(1, 1, 41, 0.9);
   color:white;
-  padding: 3rem 0;
+  padding: 3rem;
   font-size: 3rem;
   width: 78%;
   border-radius: 10px;
@@ -64,33 +64,40 @@ header{
   justify-content: center;
 }
 
-.search-input{
+.search-recipe {
   width: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+
+.search-input{
+  width: 50%;
   padding-left: 1.5rem;
   border: 0.1rem solid rgb(1, 1, 41);
 }
 
-.search-inpup :active {
+.search-input :active {
   border: 0.3rem solid rgb(10, 10, 197);
 }
 
-.RecipeListPage-underHeader-searchButton input,
-.RecipeListPage-filters-allergens{
+.RecipeListPage-underHeader-searchButton input {
   width: 95%;
 }
 
-
 .RecipeListPage-filters-allergens{
+  width: 90%;
   display: flex;
-  margin: 5rem auto;
-  max-width: 100%;
+  flex-direction: row;
+  margin: 5rem 1.5rem;
 }
 
 .RecipeListPage-filters-allergens-chosenAllergens{
   display: flex;
   flex-wrap: wrap;
-  margin: 0 1rem;
-  width: 100%;
+  margin: 0 auto;
 }
 
 .RecipeListPage-filters-allergen{

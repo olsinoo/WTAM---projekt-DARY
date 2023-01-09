@@ -147,7 +147,8 @@ export function MyRecipesList(){
                     <ListOfIngredients  ingredients={sortedIngredients()}/>
                 </div>
                 <div className='basket-shopping-list-bottom'>
-                    <button onClick={downloadShoppingList} className="basket-download-button" title="Download shopping list"><FontAwesomeIcon icon={faFileArrowDown}/></button>
+                    <button onClick={downloadShoppingList} className="basket-download-button" id="basket-download-button" title="Download shopping list"><FontAwesomeIcon icon={faFileArrowDown}/></button>
+                    {/*<span className='basket-download-hint'>Download shopping list</span>*/}
                     <GetPrice/>
                 </div>
             </section>

@@ -1,11 +1,7 @@
 .BasketCard{
-    margin: 1.5rem 0;
+    margin: 1.5rem 0.5rem;
     border: black;
     background-color: rgba(4, 4, 128, 0.123);
-    /*border: 1rem solid rgba(4, 4, 128, 0.123);*/
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: space-between;*/
     font-size: 3rem;
     width: 18rem;
     height: 24ex;
@@ -197,12 +193,38 @@
     border-radius: 100%;
     cursor: pointer;
     font-size: 2rem;
-    width: 4.5rem;
+    width: 5rem;
 }
 
 .basket-download-button:hover {
     background-color: rgba(30, 144, 255, 0.9);
 }
+
+/*.basket-download-hint {*/
+/*    font-size: large;*/
+/*    visibility: hidden;*/
+/*    width: 90%;*/
+/*    left: 50%;*/
+/*    margin-left: -45%;*/
+/*    background-color: rgb(1, 1, 41);*/
+/*    color: #e1e1e1;*/
+/*    text-align: center;*/
+/*    border-radius: 6px;*/
+/*    padding: 5px 5px;*/
+/*    transform: translateY(-50%);*/
+/*    position: absolute;*/
+/*    z-index: 1;*/
+/*}*/
+
+/*.basket-download-button:hover .basket-download-hint {*/
+/*    visibility: visible;*/
+/*}*/
+
+/*.basket-download-text {*/
+/*    font-size: 1.2rem;*/
+/*    text-align: left;*/
+/*    margin: auto;*/
+/*}*/
 
 .basket-price{
     /*background-color: #5e1515;*/

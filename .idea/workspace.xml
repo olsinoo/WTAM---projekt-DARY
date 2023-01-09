@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="463a867e-526b-40d0-b257-ee8347055b6f" name="Changes" comment="- netlify redirection fix (probably)">
+    <list default="true" id="463a867e-526b-40d0-b257-ee8347055b6f" name="Changes" comment="basket - small design changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/components/RecipeCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/RecipeCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/components/SearchInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/components/SearchInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/MyListOfRecipesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/daryproject/src/pages/RecipeListPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,20 +56,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/adamo/PhpstormProjects/WTAM-projekt_DARY/daryproject/src/database/Recipes",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "ts.external.directory.path": "C:\\Users\\adamo\\AppData\\Local\\JetBrains\\Toolbox\\apps\\PhpStorm\\ch-0\\222.4345.15\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adamo/PhpstormProjects/WTAM-projekt_DARY/daryproject/src/database/Recipes&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\adamo\\AppData\\Local\\JetBrains\\Toolbox\\apps\\PhpStorm\\ch-0\\222.4345.15\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\adamo\PhpstormProjects\WTAM-projekt_DARY\daryproject\src\database\Recipes" />
@@ -88,7 +95,8 @@
       <workItem from="1671707917888" duration="594000" />
       <workItem from="1673022370762" duration="6536000" />
       <workItem from="1673096900783" duration="27197000" />
-      <workItem from="1673181756623" duration="8393000" />
+      <workItem from="1673181756623" duration="12498000" />
+      <workItem from="1673219324910" duration="4282000" />
     </task>
     <task id="LOCAL-00001" summary="Deleting random junk">
       <created>1670429268399</created>
@@ -111,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673195460816</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="basket - small design changes">
+      <created>1673196983893</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673196983893</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +147,8 @@
     <MESSAGE value="Deleting random junk" />
     <MESSAGE value="- changed basket design&#10;- added download button for shopping list&#10;- all corners were rounded&#10;- fixed footer&#10;- grammatical fixes&#10;- graphical fixes" />
     <MESSAGE value="- netlify redirection fix (probably)" />
-    <option name="LAST_COMMIT_MESSAGE" value="- netlify redirection fix (probably)" />
+    <MESSAGE value="basket - small design changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="basket - small design changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
